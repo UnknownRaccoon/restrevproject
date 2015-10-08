@@ -1,0 +1,20 @@
+<%= form_for @review do |f| %>
+    <div id="map" style="width: 500px; height: 600px"></div>
+    Адрес заведения:<br />
+    <%= f.text_field :address %><br />
+    Название:<br />
+    <%= f.text_field :name %><br />
+    Текст обзора:<br>
+    <%= f.text_area :review %><br />
+    Комментарий (будет отображаться на карте):<br />
+    <%= f.text_field :comment %><br />
+    Кухня: <span id="mark1"></span><br />
+    Интерьер: <span id="mark2"></span><br />
+    Обслуживание: <span id="mark3"></span><br />
+    <%= f.hidden_field :mark1 %>
+    <%= f.hidden_field :mark2 %>
+    <%= f.hidden_field :mark3 %>
+    <%= f.hidden_field :x, :id=> "lat" %>
+    <%= f.hidden_field :y, :id=> "lng" %>
+    <%= f.submit %>
+<% end %>

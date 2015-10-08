@@ -1,0 +1,33 @@
+I"(function() {
+  window.onload = function() {
+    var i, len, r, rest, results;
+    rest = JSON.parse(gon.restaurants);
+    results = [];
+    for (i = 0, len = rest.length; i < len; i++) {
+      r = rest[i];
+      $('#' + r.id + 'mark1').raty({
+        score: r.mark1,
+        path: "assets/images",
+        readOnly: true
+      });
+      $('#' + r.id + 'mark2').raty({
+        score: r.mark2,
+        path: "assets/images",
+        readOnly: true
+      });
+      $('#' + r.id + 'mark3').raty({
+        score: r.mark3,
+        path: ".",
+        readOnly: true
+      });
+      results.push($('#' + r.id + 'avgrate').raty({
+        score: r.mark1 * 0.4 + r.mark2 * 0.3 + r.mark3 * 0.3,
+        path: "assets/images",
+        readOnly: true
+      }));
+    }
+    return results;
+  };
+
+}).call(this);
+:ET

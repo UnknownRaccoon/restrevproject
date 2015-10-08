@@ -1,0 +1,50 @@
+I"¹(function() {
+  var rev;
+
+  rev = JSON.parse(gon.restaurants);
+
+  window.onload = function() {
+    var i, len, r, results;
+    results = [];
+    for (i = 0, len = rev.length; i < len; i++) {
+      r = rev[i];
+      results.push(rate(r));
+    }
+    return results;
+  };
+
+  google.maps.event.addDomListener(window, 'load', function() {
+    var i, infoW, len, marker, r, results;
+    initmap();
+    infoW = new google.maps.InfoWindow;
+    window.markers = [];
+    window.cnt = [];
+    results = [];
+    for (i = 0, len = rev.length; i < len; i++) {
+      r = rev[i];
+      cnt.push(r.name + '<br />' + r.comment);
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(r.x, r.y),
+        map: map,
+        label: r.name
+      });
+      marker.addListener('click', function() {
+        var j, results1;
+        j = 0;
+        results1 = [];
+        while (j < cnt.length) {
+          if (this.getPosition() === markers[j].getPosition()) {
+            infoW.setContent(cnt[j]);
+          }
+          infoW.open(cnt, this);
+          results1.push(j++);
+        }
+        return results1;
+      });
+      results.push(markers.push(marker));
+    }
+    return results;
+  });
+
+}).call(this);
+:ET

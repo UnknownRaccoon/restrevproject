@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  x: 1.5
+  'y': 1.5
+  review: MyText
+  comment: MyString
+  mark1: 1
+  mark2: 1
+  mark3: 1
+
+two:
+  name: MyString
+  address: MyString
+  x: 1.5
+  'y': 1.5
+  review: MyText
+  comment: MyString
+  mark1: 1
+  mark2: 1
+  mark3: 1

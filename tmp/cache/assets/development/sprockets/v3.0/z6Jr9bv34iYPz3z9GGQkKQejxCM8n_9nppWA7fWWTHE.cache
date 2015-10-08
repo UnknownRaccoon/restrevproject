@@ -1,0 +1,30 @@
+I"®(function() {
+  var i, len, r, rest;
+
+  rest = JSON.parse(gon.restaurants);
+
+  for (i = 0, len = rest.length; i < len; i++) {
+    r = rest[i];
+    rate(r);
+  }
+
+  google.maps.event.addDomListener(window, 'load', function() {
+    var j, len1, marker, results;
+    results = [];
+    for (j = 0, len1 = rest.length; j < len1; j++) {
+      r = rest[j];
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(r.x, r.y),
+        map: map
+      });
+      results.push(marker.addListener('click', function() {
+        return new google.maps.InfoWindow({
+          content: "hui"
+        }).open(map, marker);
+      }));
+    }
+    return results;
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,15 @@
+I"’(function() {
+  initialize(function() {
+    var map, mapCanvas;
+    mapCanvas = document.getElementById('map');
+    return map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: new google.maps.LatLng(46.459972, 30.7117875),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+  });
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+}).call(this);
+:ET

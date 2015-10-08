@@ -1,0 +1,30 @@
+I"f(function() {
+  var rest;
+
+  rest = gon.restaurant;
+
+  window.onload = function() {
+    $('#' + rest.id + 'mark1').raty({
+      score: rest.mark1,
+      path: "assets",
+      readOnly: true
+    });
+    $('#' + rest.id + 'mark2').raty({
+      score: rest.mark2,
+      path: "assets",
+      readOnly: true
+    });
+    $('#' + rest.id + 'mark3').raty({
+      score: rest.mark3,
+      path: "assets",
+      readOnly: true
+    });
+    return $('#' + rest.id + 'avgrate').raty({
+      score: rest.mark1 * 0.4 + rest.mark2 * 0.3 + rest.mark3 * 0.3,
+      path: "assets",
+      readOnly: true
+    });
+  };
+
+}).call(this);
+:ET

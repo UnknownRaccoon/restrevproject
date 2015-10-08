@@ -1,0 +1,9 @@
+I"_(function() {
+  var rest;
+
+  rest = gon.restaurant;
+
+  alert(rest.mark1);
+
+}).call(this);
+:ET

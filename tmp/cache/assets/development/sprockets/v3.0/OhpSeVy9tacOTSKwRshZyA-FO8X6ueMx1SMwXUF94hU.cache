@@ -1,0 +1,31 @@
+I"{(function() {
+  var rev;
+
+  rev = JSON.parse(gon.restaurants);
+
+  window.onload = function() {
+    var i, len, r, results;
+    results = [];
+    for (i = 0, len = rev.length; i < len; i++) {
+      r = rev[i];
+      results.push(rate(r));
+    }
+    return results;
+  };
+
+  google.maps.event.addDomListener(window, 'load', function() {
+    var i, len, r, results;
+    initmap();
+    results = [];
+    for (i = 0, len = rev.length; i < len; i++) {
+      r = rev[i];
+      results.push(new google.maps.Marker({
+        position: new google.maps.LatLng(r.x, r.y),
+        map: map
+      }));
+    }
+    return results;
+  });
+
+}).call(this);
+:ET

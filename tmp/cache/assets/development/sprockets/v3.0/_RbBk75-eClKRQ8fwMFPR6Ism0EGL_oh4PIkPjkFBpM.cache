@@ -1,0 +1,47 @@
+I" (function() {
+  var rev;
+
+  rev = JSON.parse(gon.restaurants);
+
+  window.onload = function() {
+    var j, len, r, results;
+    results = [];
+    for (j = 0, len = rev.length; j < len; j++) {
+      r = rev[j];
+      results.push(rate(r));
+    }
+    return results;
+  };
+
+  google.maps.event.addDomListener(window, 'load', function() {
+    var i, infoW, j, len, marker, r, results, text;
+    initmap();
+    infoW = new google.maps.InfoWindow({
+      content: "Test"
+    });
+    window.markers = [];
+    window.names = [];
+    for (j = 0, len = rev.length; j < len; j++) {
+      r = rev[j];
+      text = r.name;
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(r.x, r.y),
+        map: map
+      });
+      names.push(r.name);
+      markers.push(marker);
+    }
+    i = 0;
+    results = [];
+    while (i < names.length) {
+      markers[i].addListener('click', function() {
+        infoW.setContent(names[i]);
+        return infoW.open(map, this);
+      });
+      results.push(i++);
+    }
+    return results;
+  });
+
+}).call(this);
+:ET

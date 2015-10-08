@@ -1,0 +1,38 @@
+I"§(function() {
+  var rest;
+
+  window.onload = function() {
+    return rate(gon.restaurant);
+  };
+
+  rest = JSON.parse(gon.restaurants);
+
+  window.onload = function() {
+    var i, len, r, results;
+    results = [];
+    for (i = 0, len = rest.length; i < len; i++) {
+      r = rest[i];
+      results.push(rate(r));
+    }
+    return results;
+  };
+
+  google.maps.event.addDomListener(window, 'load', function() {
+    var map, mapCanvas;
+    mapCanvas = document.getElementById('map');
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: new google.maps.LatLng(46.4711427, 30.7396057),
+      zoom: 14,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    return navigator.geolocation.getCurrentPosition(function(position) {
+      map.setCenter({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      });
+      return map.setZoom(16);
+    }, function() {});
+  });
+
+}).call(this);
+:ET

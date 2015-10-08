@@ -1,0 +1,7 @@
+I"I(function() {
+  var rest;
+
+  rest = gon.restaurant;
+
+}).call(this);
+:ET

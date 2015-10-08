@@ -1,0 +1,45 @@
+I"(function() {
+  window.rate = function(id, ro) {
+    var string;
+    if (ro == null) {
+      ro = true;
+    }
+    string = "#";
+    if (ro) {
+      string += r.id;
+    }
+    $(string + 'mark1').raty({
+      score: r.mark1,
+      path: "/assets",
+      readOnly: ro
+    });
+    $(string + 'mark2').raty({
+      score: r.mark2,
+      path: "/assets",
+      readOnly: ro
+    });
+    $(string + 'mark3').raty({
+      score: r.mark3,
+      path: "/assets",
+      readOnly: ro
+    });
+    $(string + 'avgrate').raty({
+      score: r.mark1 * 0.4 + r.mark2 * 0.3 + r.mark3 * 0.3,
+      path: "/assets",
+      readOnly: true
+    });
+    if (!ro) {
+      $('#mark1 > img').click(function() {
+        return $('input[name="review[mark1]"]').val($(this).attr("alt"));
+      });
+      $('#mark2 > img').click(function() {
+        return $('input[name="review[mark2]"]').val($(this).attr("alt"));
+      });
+      return $('#mark3 > img').click(function() {
+        return $('input[name="review[mark3]"]').val($(this).attr("alt"));
+      });
+    }
+  };
+
+}).call(this);
+:ET
