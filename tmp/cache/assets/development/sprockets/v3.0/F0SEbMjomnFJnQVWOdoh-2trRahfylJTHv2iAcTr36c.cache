@@ -1,7 +1,0 @@
-I"h(function() {
-  window.onload = function() {
-    return rate(gon.restaurant);
-  };
-
-}).call(this);
-:ET
