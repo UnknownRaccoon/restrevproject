@@ -7,23 +7,13 @@ window.rate = (r, ro = true) ->
     string += r.id if ro    # when both viewing end editing
 
     # Setting up rating divs
-
-    $((string + 'mark1')).raty(
-        score: r.mark1,
-        path: "/assets",
-        readOnly: ro
-    )
-    $((string + 'mark2')).raty(
-        score: r.mark2,
-        path: "/assets",
-        readOnly: ro
-    )
-    $((string + 'mark3')).raty(
-        score: r.mark3,
-        path: "/assets",
-        readOnly: ro
-    )
-    $((string + 'avgrate')).raty(
+    for i in [1..3]
+        $(string + 'mark' + i).raty(
+            score: r.mark1,
+            path: "/assets",
+            readOnly: ro
+        )
+    $(string + 'avgrate').raty(
         score: r.mark1 * 0.4 + r.mark2 * 0.3 + r.mark3 * 0.3,
         path: "/assets",
         readOnly: true

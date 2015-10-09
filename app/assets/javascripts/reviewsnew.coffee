@@ -10,6 +10,7 @@ google.maps.event.addDomListener(window, 'load', ->
         map: map,
         animation: google.maps.Animation.DROP,
         draggable: true
+        setPosition(gon.restaurant.x, gon.restaurant.y)
     )
     
     # Saving coordinates to inputs by clicking the map or dragging the marker
@@ -19,11 +20,6 @@ google.maps.event.addDomListener(window, 'load', ->
         $("#lng").val(event.latLng.lng())
         geocodeLatLng(event.latLng)
     )
-    google.maps.event.addListener(marker,'drag', (event) ->
-        $("#lat").val(event.latLng.lat())
-        $("#lng").val(event.latLng.lng())
-    )
-
     google.maps.event.addListener(marker,'dragend', (event) ->
         $("#lat").val(event.latLng.lat())
         $("#lng").val(event.latLng.lng())

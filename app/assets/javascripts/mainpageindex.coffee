@@ -14,22 +14,17 @@ google.maps.event.addDomListener(window, 'load', ->
 
     # Adding markers and labels for them
     markers = []
-    cnt = []
     for r in rev
-        cnt.push(r.name + '<br />' + r.comment)
         marker = new google.maps.Marker(
             position: new google.maps.LatLng(r.x, r.y),
             map: map
             label: r.name[0]
         )
         marker.addListener('click', ->
-            j = 0
-            while j < cnt.length
-                if this.getPosition() == markers[j].getPosition()
-                    infoW.setContent(cnt[j]) 
+            for m of markers
+                if markers[m] == this
+                    infoW.setContent(m) 
                     infoW.open(map, this)
-                    break
-                j++
         )
-        markers.push(marker)
+        markers[r.name + '<br />' + r.comment] = marker
 )

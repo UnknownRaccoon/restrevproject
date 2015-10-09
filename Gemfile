@@ -5,6 +5,9 @@ gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Localization support
+gem 'rails-i18n'
+
 # Authentication & authorization
 gem 'devise'
 
@@ -12,6 +15,9 @@ gem 'gon'
 
 # Required by Haroku
 gem 'rails_12factor'
+
+# Bootstrap support
+gem 'bootstrap-sass'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -1,4 +1,3 @@
-
 # The script loads the map and centers it to the user's position. If geolocation fails the map will focus on the center of Odessa
 window.initmap = ->
     mapCanvas = document.getElementById('map')

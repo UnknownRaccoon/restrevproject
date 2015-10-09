@@ -1,16 +1,26 @@
 <%= form_for @review do |f| %>
+    <% if @review.errors.any? %>
+        <div id="error_explanation">
+            <h2>Невозможно сохранить статью по следующим причинам:</h2>
+            <ul>
+                <% @review.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
     <div id="map" style="width: 500px; height: 600px"></div>
-    Адрес заведения:<br />
+    <%= f.label :address %><br />
     <%= f.text_field :address %><br />
-    Название:<br />
+    <%= f.label :name %><br />
     <%= f.text_field :name %><br />
-    Текст обзора:<br>
+    <%= f.label :review %><br />
     <%= f.text_area :review %><br />
-    Комментарий (будет отображаться на карте):<br />
+    <%= f.label :comment %><br />
     <%= f.text_field :comment %><br />
-    Кухня: <span id="mark1"></span><br />
-    Интерьер: <span id="mark2"></span><br />
-    Обслуживание: <span id="mark3"></span><br />
+    <%= f.label :mark1 %>: <span id="mark1"></span><br />
+    <%= f.label :mark2 %>: <span id="mark2"></span><br />
+    <%= f.label :mark3 %>: <span id="mark3"></span><br />
     <%= f.hidden_field :mark1 %>
     <%= f.hidden_field :mark2 %>
     <%= f.hidden_field :mark3 %>
