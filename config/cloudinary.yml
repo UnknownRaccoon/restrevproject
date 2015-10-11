@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: unknownraccoon
+  api_key: '212439761372752'
+  api_secret: 1NZPQvx1eK63eY8i3h33DDfW-9k
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: unknownraccoon
+  api_key: '212439761372752'
+  api_secret: 1NZPQvx1eK63eY8i3h33DDfW-9k
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: unknownraccoon
+  api_key: '212439761372752'
+  api_secret: 1NZPQvx1eK63eY8i3h33DDfW-9k
+  enhance_image_tag: true
+  static_image_support: false

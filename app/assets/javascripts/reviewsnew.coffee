@@ -2,43 +2,44 @@
 #= require map
 
 window.onload = ->
-    rate(gon.restaurant, false)
+    rate gon.restaurant, false
 
-google.maps.event.addDomListener(window, 'load', ->
+google.maps.event.addDomListener window, 'load', ->
     initmap()
-    marker = new google.maps.Marker(
-        map: map,
-        animation: google.maps.Animation.DROP,
+    marker = new google.maps.Marker
+        map: map
+        animation: google.maps.Animation.DROP
         draggable: true
-        setPosition(gon.restaurant.x, gon.restaurant.y)
-    )
-    
+        position:
+            lat: gon.restaurant.x
+            lng: gon.restaurant.y
+
     # Saving coordinates to inputs by clicking the map or dragging the marker
-    google.maps.event.addListener(map, 'click', (event) ->
-        marker.setPosition(event.latLng)
-        $("#lat").val(event.latLng.lat())
-        $("#lng").val(event.latLng.lng())
-        geocodeLatLng(event.latLng)
-    )
-    google.maps.event.addListener(marker,'dragend', (event) ->
-        $("#lat").val(event.latLng.lat())
-        $("#lng").val(event.latLng.lng())
-        geocodeLatLng(marker.getPosition())
-    )
-)
+    google.maps.event.addListener map, 'click', (event) ->
+        marker.setPosition event.latLng
+        $('#lat').val event.latLng.lat()
+        $('#lng').val event.latLng.lng()
+        geocodeLatLng event.latLng
+
+    google.maps.event.addListener marker,'dragend', (event) ->
+        $('#lat').val event.latLng.lat()
+        $('#lng').val event.latLng.lng()
+        geocodeLatLng marker.getPosition
 
 # Getting address from marker's location
-geocodeLatLng = (pos) ->   
-    xmlHttp = new XMLHttpRequest()
-    xmlHttp.onreadystatechange = ->
-        if xmlHttp.readyState == 4 and xmlHttp.status == 200
-            $('input[name="review[address]"]').val(JSON.parse(xmlHttp.responseText).response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.AddressDetails.Country.AddressLine)
-    xmlHttp.open("GET", "https://geocode-maps.yandex.ru/1.x/?sco=latlong&format=json&geocode=" + pos.lat() + ","+ pos.lng(), true)
-    xmlHttp.send(null)
+geocodeLatLng = (pos) ->
+    $.ajax('https://geocode-maps.yandex.ru/1.x/',
+        data:
+            sco: 'latlong'
+            format: 'json'
+            geocode: "#{pos.lat()}, #{pos.lng()}"
+        dataType: 'json'
+    ).done (result) ->
+        $('input[name="review[address]"]').val result.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.AddressDetails.Country.AddressLine
 
 # For ukrainian streets google's geocoder sends ukrainian names only
 #geocodeLatLng = (position) ->
-#    geocoder = new google.maps.Geocoder()
+#    geocoder = new google.maps.Geocoder
 #    geocoder.geocode('location': position, (results, status)->
 #        if status == google.maps.GeocoderStatus.OK
 #            if results[1]

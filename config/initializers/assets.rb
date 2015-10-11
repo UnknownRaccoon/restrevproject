@@ -9,10 +9,4 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w(reviewsnew.js)
-Rails.application.config.assets.precompile += %w(mainpageindex.js)
-Rails.application.config.assets.precompile += %w(mainpageindex.css)
-Rails.application.config.assets.precompile += %w(reviewsedit.js)
-Rails.application.config.assets.precompile += %w(reviewsshow.js)
-Rails.application.config.assets.precompile += %w(reviewsupdate.js)
-Rails.application.config.assets.precompile += %w(reviewscreate.js)
+Rails.application.config.assets.precompile = ['*.js', '*.css', '*.gif']

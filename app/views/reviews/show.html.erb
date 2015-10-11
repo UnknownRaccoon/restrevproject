@@ -4,6 +4,6 @@
 Кухня: <span id="<%= @review.id %>mark1"></span><br />
 Интерьер: <span id="<%= @review.id %>mark2"></span><br />
 Обслуживание: <span id="<%= @review.id %>mark3"></span><br />
-Общая оценка: <span id="<%= @review.id %>avgrate"></span> (<%= @review.avgrate %> из 5)<br /><br />
+Общая оценка: <span id="<%= @review.id %>avgrate"></span> (<%= @review.avgrate.round(1) %> из 5)<br /><br />
 Дата публикации: <%= @review.created_at.strftime("%-d, %B %Y") %>
 <%= link_to 'Назад', root_path %> 

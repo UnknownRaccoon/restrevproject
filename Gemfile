@@ -11,6 +11,10 @@ gem 'rails-i18n'
 # Authentication & authorization
 gem 'devise'
 
+# For storing & uploading images
+gem 'cloudinary'
+gem "jquery-fileupload-rails"
+
 gem 'gon'
 
 # Required by Haroku
