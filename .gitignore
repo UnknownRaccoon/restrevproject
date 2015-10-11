@@ -10,5 +10,4 @@
 /log/*
 !/log/.keep
 /tmp
-.*
-!/.directory
+.directory
