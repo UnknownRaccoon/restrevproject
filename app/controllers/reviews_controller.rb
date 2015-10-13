@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
             render 'new'
         end
     end
-    
+
     def update
         @review = Review.find(params[:id])
         gon.restaurant = @review
@@ -38,7 +38,7 @@ class ReviewsController < ApplicationController
         @review.destroy
         redirect_to root_path
     end
-    
+
     private
         def review_params
             params.require(:review).permit(:name, :review, :address, :x, :y, :mark1, :mark2, :mark3, :comment)

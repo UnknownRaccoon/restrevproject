@@ -7,6 +7,10 @@ rev = JSON.parse gon.restaurants
 
 window.onload = ->      # Loading
     rate r for r in rev # the ratings
+    if not $('.alert').is(':empty')
+        $('.alert').show
+    if not $('.notice').is(':empty')
+        $('.notice').show
 
 google.maps.event.addDomListener window, 'load', ->
     initmap()

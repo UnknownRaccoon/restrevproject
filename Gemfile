@@ -13,7 +13,8 @@ gem 'devise'
 
 # For storing & uploading images
 gem 'cloudinary'
-gem "jquery-fileupload-rails"
+
+gem 'slimbox2-rails'
 
 gem 'gon'
 

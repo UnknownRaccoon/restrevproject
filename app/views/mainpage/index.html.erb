@@ -1,89 +1,88 @@
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Restguide</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><%= link_to 'Создать', new_review_path if admin_signed_in? %></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<img class="img-responsive headimg" src="assets/header.jpg" alt="RESTGUIDE">
+<div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-menu">
+            <span class="sr-only">Открыть навигацию</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
     </div>
-    <!-- /.container -->
-</nav>
-<!-- Page Content -->
-<div class="container">
-    <!-- Page Heading -->
+    <div class="collapse navbar-collapse" id="responsive-menu">
+        <ul class="nav navbar-nav">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Поиск">
+            </div>
+            <button type="submit" class="btn btn-default">Найти</button>
+        </form>
+    </div>
+</div>
+<div class="container content">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-sm-12">
             <h1 class="page-header">Restguide <small>Рестораны, кафе, бары...</small></h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-7">
+    <div>
+        <div class="col-sm-7">
             <div id="map"></div>
         </div>
-        <div class="col-md-5">
+        <br />
+        <div class="sol-sm-5 top10">
+            <h3 class="hh">Лучшие рестораны</h3>
+            <table class="table">
+                <% @restaurants.sort { |a,b| b.avgrate <=> a.avgrate }.first(10).each do |rest| %>
+                    <tr><td><a href="#"><%= rest.name %></a></td><td><span class="<%= rest.id %>avgrate"></span></td></tr>
+                <% end %>
+            </table>
         </div>
     </div>
-    <hr />
-    <!-- /.row -->
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="c-main">Каталог заведений:</h1>
+        </div>
+    </div>
     <% @restaurants.reverse.each do |rest| %>
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-sm-5">
                 <a href="#"><img class="img-responsive" src="http://placehold.it/700x300" alt=""></a>
             </div>
-            <div class="col-md-4">
-                <h3><%= rest.name %></h3>
-                <h4><%= rest.address %></h4>
-                <p><%= rest.review.truncate(300) %></p>
-                <!--<span class="glyphicon glyphicon-chevron-right"></span> -->
+            <div class="col-sm-4">
+                <div>
+                    <h3><%= rest.name %></h3>
+                    <h4><%= rest.address %></h4>
+                    <p><%= rest.review.truncate(300) %></p>
+                </div>
+                <div class="text-center">
+                    <%= link_to 'Подробнее', review_path(rest), :class => "btn btn-primary" %>
+                    <% if admin_signed_in? %>
+                        <%= link_to 'Редактировать', edit_review_path(rest), :class => "btn btn-success" %>
+                        <%= link_to 'Удалить', review_path(rest), method: :delete, data: {}, :class => "btn btn-danger" %>
+                    <% end %>
+                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <table>
                     <tr>
-                        <td>Кухня:</td><td><span id="<%= rest.id %>mark1"></span></td>
+                        <td>Кухня:</td><td><span class="<%= rest.id %>mark1"></span></td>
                     </tr>
                     <tr>
-                        <td>Интерьер:</td><td><span id="<%= rest.id %>mark2"></span></td>
+                        <td>Интерьер:</td><td><span class="<%= rest.id %>mark2"></span></td>
                     </tr>
                     <tr>
-                        <td>Обслуживание:</td><td><span id="<%= rest.id %>mark3"></span></td>
+                        <td>Обслуживание:</td><td><span class="<%= rest.id %>mark3"></span></td>
                     </tr>
                     <tr>
-                        <td>Общая оценка:</td><td><span id="<%= rest.id %>avgrate"></span><br /><%= rest.avgrate.round(1) %> из 5.0</td>
+                        <td>Общая оценка:</td><td><span class="<%= rest.id %>avgrate"></span><br /><%= rest.avgrate.round(1) %> из 5.0</td>
                     </tr>
                 </table>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-5"></div>
-            <div class="col-lg-4">
-                <div class="text-center">
-                    <%= link_to 'Открыть', review_path(rest), :class => "btn btn-primary" %>
-                    <% if admin_signed_in? %>
-                        <%= link_to 'Отредактировать', edit_review_path(rest), :class => "btn btn-primary" %>
-                        <%= link_to 'Удалить', review_path(rest), method: :delete, data: {}, :class => "btn btn-primary" %>
-                    <% end %>
-                </div>
-            </div>
-            <div class="col-lg-3"></div>
-        </div>
-        <!-- /.row -->
-        <hr>
+        <hr />
     <% end %>
-    <!-- Footer -->
 </div>
-<!-- /.container -->
