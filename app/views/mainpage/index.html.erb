@@ -14,12 +14,13 @@
             <li><a href="#">О нас</a></li>
             <li><a href="#">Контакты</a></li>
         </ul>
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Поиск">
-            </div>
-            <button type="submit" class="btn btn-default">Найти</button>
-        </form>
+        <%= form_tag root_path, :method => 'get', :id => "reviews_search", :class => "navbar-form navbar-left" do %>
+            <p class="form-group">
+                <%= text_field_tag :search, params[:search], :class => "form-control" %>
+                <%= submit_tag "Найти", :name => nil, :class => "btn btn-default" %>
+            </p>
+            <%= hidden_field_tag :sort, params[:sort] %>
+        <% end %>
     </div>
 </div>
 <div class="container content">
@@ -43,14 +44,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
-            <h1 class="c-main">Каталог заведений:</h1>
+        <div class="col-sm-12 c-main">
+            <h1 class="">Каталог заведений:</h1>
+            <%= link_to 'Написать новую рецензию', new_review_path if admin_signed_in? %>
         </div>
     </div>
-    <% @restaurants.reverse.each do |rest| %>
+    <% @restaurants.search(params[:search]).reverse.each do |rest| %>
         <div class="row">
             <div class="col-sm-5">
-                <a href="#"><img class="img-responsive" src="http://placehold.it/700x300" alt=""></a>
+                <a href="#"><%= cl_image_tag(rest.photos.first.path, {size: '500x250', crop: :fit, class: "img-responsive"}) if rest.photos.first != nil %></a>
             </div>
             <div class="col-sm-4">
                 <div>

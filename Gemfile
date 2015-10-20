@@ -13,7 +13,7 @@ gem 'devise'
 
 # For storing & uploading images
 gem 'cloudinary'
-
+gem 'attachinary'
 gem 'slimbox2-rails'
 
 gem 'gon'

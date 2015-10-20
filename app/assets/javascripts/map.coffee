@@ -2,7 +2,7 @@
 window.initmap = ->
     window.map = new google.maps.Map document.getElementById('map'),
         center: new google.maps.LatLng 46.4711427, 30.7396057
-        zoom: 14
+        zoom: 15
     navigator.geolocation.getCurrentPosition (position) ->
         map.setCenter lat: position.coords.latitude, lng: position.coords.longitude
     , ->

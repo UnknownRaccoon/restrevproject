@@ -1,3 +1,3 @@
 #= require rate
 window.onload = ->
-    rate(gon.restaurant)
+    rate gon.restaurant

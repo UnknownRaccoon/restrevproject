@@ -9,7 +9,7 @@
  <%= stylesheet_link_tag 'application', params[:controller] + params[:action], media: 'all', 'data-turbolinks-track' => true %>
  <%= Gon::Base.render_data %>
  <%= javascript_include_tag 'application', params[:controller] + params[:action], 'data-turbolinks-track' => true %>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+ <%= cloudinary_js_config %>
  <%= csrf_meta_tags %>
 </head>
 <body>

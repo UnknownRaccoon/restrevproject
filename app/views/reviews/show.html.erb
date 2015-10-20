@@ -5,5 +5,8 @@
 Интерьер: <span class="<%= @review.id %>mark2"></span><br />
 Обслуживание: <span class="<%= @review.id %>mark3"></span><br />
 Общая оценка: <span class="<%= @review.id %>avgrate"></span> (<%= @review.avgrate.round(1) %> из 5)<br /><br />
-Дата публикации: <%= @review.created_at.strftime("%-d, %B %Y") %>
-<%= link_to 'Назад', root_path %> 
+Дата публикации: <%= @review.created_at.strftime("%-d, %B %Y") %><br />
+<% @review.photos.each do |phot| %>
+    <%= link_to cl_image_tag(phot.path, {size: '100x50', crop: :fit, class: "img-responsive"}) , cl_image_path(phot.path), :rel => "lightbox-review" %>
+<% end %>
+<%= link_to 'Назад', root_path %>

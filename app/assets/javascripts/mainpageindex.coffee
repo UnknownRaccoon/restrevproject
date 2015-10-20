@@ -29,4 +29,4 @@ google.maps.event.addDomListener window, 'load', ->
                     infoW.setContent m
                     infoW.open map, this
                     break
-        markers["<a href='reviews/#{r.id}'>#{r.name}</a><br />#{r.comment}"] = marker
+        markers["<a href='reviews/#{r.id}'>#{r.name}</a><br /><small>#{r.address}</small><br />#{r.comment}"] = marker

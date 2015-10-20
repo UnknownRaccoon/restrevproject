@@ -1,4 +1,3 @@
-<%= cloudinary_js_config %>
 <%= form_for @review do |f| %>
     <% if @review.errors.any? %>
         <div id="error_explanation">
@@ -29,10 +28,7 @@
                 <%= f.hidden_field :mark1 %>
                 <%= f.hidden_field :mark2 %>
                 <%= f.hidden_field :mark3 %>
-                <%= form_tag(new_review_path, :method => :post) do  %>
-                    <%= cl_image_upload_tag(:image_id, :html => {:multiple => true}) %>
-                <% end %>
-                <div class="fotorama"></div>
+                <%= f.attachinary_file_field :photos %>
                 <%= f.submit %>
             </div>
             <div class="col-lg-7">

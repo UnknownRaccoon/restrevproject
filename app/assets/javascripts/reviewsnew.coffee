@@ -1,15 +1,9 @@
 #= require rate
 #= require map
-#= require slimbox2.min
-#= require cloudinary
 
 window.onload = ->
-    rate(gon.restaurant, false)
-    $('.cloudinary-fileupload').bind('cloudinarydone', (e, data) ->  
-        $('.fotorama').append("<a href=" + $.cloudinary.image(data.result.public_id, format: data.result.format, version: data.result.version, crop: 'fill', width: 150, height: 100) + " rel='lightbox' title='my caption'>image #1</a>"
-        )   
-        $('cloudinary-fileupload').val(data.result.public_id)
-    )
+    rate gon.restaurant, false
+    $('.attachinary-input').attachinary()
 
 google.maps.event.addDomListener window, 'load', ->
     initmap()
