@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://vk.com/js/api/share.js?92" charset="windows-1251"></script>
 <h2><%= @review.name %></h2>
 Адрес: <%= @review.address %><br />
 <%= @review.review %><br /><br />
@@ -9,4 +10,11 @@
 <% @review.photos.each do |phot| %>
     <%= link_to cl_image_tag(phot.path, {size: '100x50', crop: :fit, class: "img-responsive"}) , cl_image_path(phot.path), :rel => "lightbox-review" %>
 <% end %>
+Поделиться:
+<script type="text/javascript"><!--
+document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"http://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));
+--></script>
+<a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %> target="_blank">
+  <img src="http://blog.bnv.com.ua/wp-content/themes/cell/images/fb.png">
+</a>
 <%= link_to 'Назад', root_path %>
