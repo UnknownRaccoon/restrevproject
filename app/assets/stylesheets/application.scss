@@ -10,3 +10,19 @@
 .notice {
     display: none;
 }
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+	background: #FDFDFD;
+    box-shadow: 0px 0px 4px 1px #dbdbdb;
+	margin-top: 1%;
+	background: transparent;
+}
+
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}

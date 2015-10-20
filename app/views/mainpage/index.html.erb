@@ -1,33 +1,35 @@
-<img class="img-responsive headimg" src="assets/header.jpg" alt="RESTGUIDE">
-<div class="navbar navbar-inverse navbar-static-top">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-menu">
-            <span class="sr-only">Открыть навигацию</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-    <div class="collapse navbar-collapse" id="responsive-menu">
-        <ul class="nav navbar-nav">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Поиск">
+   <!-- Header -->
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
+<script type="text/javascript"> VK.init({apiId: API_ID, onlyWidgets: true});</script>
+ 
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+   <header>
+	<div class="container">
+		
+    	<div class="intro-text">
+                <div class="intro-lead-in">Добро пожаловать в RESTguide!</div>
+                <div class="intro-heading">Проведи время</div>
+                <a href="#content" class="page-scroll btn btn-xl">с удовольствием</a>
             </div>
-            <button type="submit" class="btn btn-default">Найти</button>
-        </form>
-    </div>
-</div>
+        </div>
+    </header>
+<selection id="content">
 <div class="container content">
     <div class="row">
-        <div class="col-sm-12">
-            <h1 class="page-header">Restguide <small>Рестораны, кафе, бары...</small></h1>
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="page-header">Лучшие рестораны твоего города</h2>
         </div>
     </div>
+	<div class="row">
     <div>
         <div class="col-sm-7">
             <div id="map"></div>
@@ -54,7 +56,7 @@
             </div>
             <div class="col-sm-4">
                 <div>
-                    <h3><%= rest.name %></h3>
+                    
                     <h4><%= rest.address %></h4>
                     <p><%= rest.review.truncate(300) %></p>
                 </div>
@@ -67,6 +69,8 @@
                 </div>
             </div>
             <div class="col-sm-3">
+			<h3><%= rest.name %></h3><div id="vk_like"></div><script type="text/javascript">VK.Widgets.Like("vk_like", {type: "mini"});</script>  <div class="fb-share-button" 
+        data-href="http://restrev.herokuapp.com/"  data-layout="button_count"> </div>
                 <table>
                     <tr>
                         <td>Кухня:</td><td><span class="<%= rest.id %>mark1"></span></td>
@@ -86,3 +90,68 @@
         <hr />
     <% end %>
 </div>
+</div>
+</selection>
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+				 <div class="col-md-6">
+				  <div class="modal-body">
+				  <img src="assets/mentor.jpg" alt="Виталий Лебедев">
+				  </div>
+				 </div>
+                    <div class="col-md-6">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>О нас</h2>
+                            <p class="item-intro text-muted">
+							Виталий Лебедев, ресторанный критик, писатель. Учился в Odessa State Environmental University. Работал в DataArt как Back-end (PHP) and front-end (JavaScript + (X)HTML) development 
+							Занимался волонтерской деятельностью - обучал и коорденировал работу начинающих ИТ-специалистов.</p>
+							<p>После того как ему надоело отвечать на глупые письма конкурсантови разбирать бредовый код, он
+							начал сотрудничать со многими журналами и газетами. Написал несколько книг (на кулинарную тематику) 
+							Последние несколько лет темы статей ограничивает – ресторанами. Проводит семинары на тему «Ресторанный бизнес»
+							Недавно покинул издание с которым сотрудничал долгое время и решил создать свой собственный проект.</p> 
+							<h3>«Для меня ресторан – это в первую очередь люди. Я хочу, чтобы они получали удовольстивие».</h3>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Ukraine,RESTguide </h2>
+                            <p class="item-intro text-muted">Home office</p>
+							<iframe style="width:768px;height:380px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://maps.google.com/maps?hl=en&q= DataArt, ODESSA,&ie=UTF8&t=roadmap&z=13&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a></small></div></iframe>
+                            <p></p> 
+							<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыт</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/classie.js"></script>
+    <script src="assets/cbpAnimatedHeader.js"></script>
