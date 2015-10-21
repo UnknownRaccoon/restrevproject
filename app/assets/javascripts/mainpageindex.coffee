@@ -11,6 +11,12 @@ window.onload = ->      # Loading
         $('.alert').show
     if not $('.notice').is(':empty')
         $('.notice').show
+    $('a.page-scroll').bind 'click',(event) -> 
+        $anchor = $(this)
+        $('html, body').stop().animate(
+            scrollTop: $($anchor.attr('href')).offset().top - 60
+        , 1500, 'easeInOutExpo')
+        event.preventDefault()
 
 google.maps.event.addDomListener window, 'load', ->
     initmap()
@@ -29,4 +35,6 @@ google.maps.event.addDomListener window, 'load', ->
                     infoW.setContent m
                     infoW.open map, this
                     break
-        markers["<a href='reviews/#{r.id}'>#{r.name}</a><br />#{r.comment}"] = marker
+        markers["<a href='reviews/#{r.id}'>#{r.name}</a><br /><small>#{r.address}</small><br />#{r.comment}"] = marker
+
+

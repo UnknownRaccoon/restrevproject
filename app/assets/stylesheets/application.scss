@@ -1,12 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'slimbox2';
+
 #map {
     height: 400px;
     background-color: #CCC;
 }
+
 .alert {
     display: none;
 }
+
 .notice {
     display: none;
 }
@@ -14,10 +18,10 @@
 footer {
     padding: 25px 0;
     text-align: center;
-	background: #FDFDFD;
+    background: #FDFDFD;
     box-shadow: 0px 0px 4px 1px #dbdbdb;
-	margin-top: 1%;
-	background: transparent;
+    margin-top: 1%;
+    background: transparent;
 }
 
 footer span.copyright {

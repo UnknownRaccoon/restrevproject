@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+    before_filter :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
     def new
         @review = Review.new
         gon.restaurant = @review
@@ -16,6 +17,7 @@ class ReviewsController < ApplicationController
 
     def create
         @review = Review.new(review_params)
+        gon.restaurant = @review
         if @review.save
             redirect_to @review
         else
@@ -41,6 +43,6 @@ class ReviewsController < ApplicationController
 
     private
         def review_params
-            params.require(:review).permit(:name, :review, :address, :x, :y, :mark1, :mark2, :mark3, :comment)
+            params.require(:review).permit(:name, :review, :address, :x, :y, :mark1, :mark2, :mark3, :comment, photos: [])
         end
 end
