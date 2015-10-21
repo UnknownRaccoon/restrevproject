@@ -13,8 +13,47 @@
  <%= csrf_meta_tags %>
 </head>
 <body>
+    <nav class="navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img alt="RG" src=<%= asset_path('emblem-small.png') %>></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-menu">
+                <span class="sr-only">Открыть навигацию</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="responsive-menu">
+            <ul class="nav navbar-nav">
+                <li><%= link_to 'Главная', root_path + "#content" %></li>
+                <li><%= link_to 'О нас', root_path + "#portfolioModal1", :class => "portfolio-link", "data-toggle" => "modal" %></li>
+                <li><%= link_to 'Контакты', root_path + "#portfolioModal2", :class => "portfolio-link", "data-toggle" => "modal" %></li>
+                <li><%= link_to 'Написать новую рецензию', new_review_path if admin_signed_in? %></li>
+            </ul>
+        <%= form_tag root_path, :method => 'get', :id => "reviews_search", :class => "navbar-form navbar-right" do %>
+            <p class="form-group">
+                <%= text_field_tag :search, params[:search], :class => "form-control" %>
+                <%= submit_tag "Найти", :name => nil, :class => "btn btn-default" %>
+            </p>
+            <%= hidden_field_tag :sort, params[:sort] %>
+        <% end %>
+    </div>
+</nav>
+<!-- END NAV -->
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; Restguide. 2015</span>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+                <span class="copyright">Folgen Team</span>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
