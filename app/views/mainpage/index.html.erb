@@ -1,105 +1,130 @@
-<!-- Header -->
-<header>
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in">Добро пожаловать в RESTguide!</div>
-            <div class="intro-heading">Проведи время</div>
-            <a href="#content" class="page-scroll btn btn-xl">с удовольствием</a>
-        </div>
-    </div>
-</header>
-<!-- Content -->
-<div class="container content" id="content">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h2 class="page-header">Выбирай лучшие рестораны</h2>
-        </div>
-    </div>
-	<div class="row">
-        <div class="col-sm-7">
-            <div id="map"></div>
-        </div>
-        <div class="sol-sm-5 top10">
-            <table class="table">
-                <% @restaurants.sort { |a,b| b.avgrate <=> a.avgrate }.first(10).each do |rest| %>
-                    <tr><td><a href="#"><%= rest.name %></a></td><td><span class="<%= rest.id %>avgrate"></span></td><td><%= rest.avgrate.round(1) %> / 5.0</td></tr>
-                <% end %>
-            </table>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 c-main">
-            <h1 class="">Каталог заведений:</h1>
-        </div>
-    </div>
-    <% @restaurants.search(params[:search]).reverse.each do |rest| %>
-        <div class="row">
-            <div class="col-sm-5">
-                <a href="#"><%= cl_image_tag(rest.photos.first.path, {size: '500x250', crop: :fit, class: "img-responsive"}) if rest.photos.first != nil %></a>
-            </div>
-            <div class="col-sm-4">
-                <h3><%= rest.name %></h3>
-                <p><%= rest.review.truncate(300) %></p>
-                <%= link_to 'Подробнее', review_path(rest), :class => "btn btn-primary" %>
-                <% if admin_signed_in? %>
-                    <%= link_to 'Редактировать', edit_review_path(rest), :class => "btn btn-success" %>
-                    <%= link_to 'Удалить', review_path(rest), method: :delete, data: {}, :class => "btn btn-danger" %>
-                <% end %>
-            </div>
-            <div class="col-sm-3">
-			<h4><%= rest.address %></h4>
-                <table>
-                    <tr>
-                        <td>Кухня:</td><td><span class="<%= rest.id %>mark1"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Интерьер:</td><td><span class="<%= rest.id %>mark2"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Обслуживание:</td><td><span class="<%= rest.id %>mark3"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Общая оценка:</td><td><span class="<%= rest.id %>avgrate"></span><br /><%= rest.avgrate.round(1) %> из 5.0</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <hr />
-    <% end %>
+<!-- VIDEO -->
+	<div class="homepage-hero-module">
+		<div class="video-container">
+			<div class="intro-text">
+	<div class="intro-lead-in">Добро пожаловать в RESTguide!</div>
+	<div class="intro-heading">Проведи время</div>
+	<a href="#content" id="dowm">с удовольствием</a>
 </div>
+			<div class="filter"></div>
+			<video autoplay loop class="fillWidth">
+					<source src="assets/header.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+					<source src="assets/136.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			</video>
+			<div class="poster hidden">
+					<img src="PATH_TO_JPEG" alt="">
+			</div>
+		</div>
+	</div> <!-- END VIDEO -->
+<!-- CONTENT -->
+<div class="content" id="content">
+	<div class="c-main container"> <!-- C-MAIN -->
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="c-title">
+					<h2>Выбирай лучшие рестораны</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-7">
+				<div id="map"></div>
+			</div>
+			<div class="sol-sm-5">
+				<div class="top-rest">
+					<table class="table">
+						<% @restaurants.sort { |a,b| b.avgrate <=> a.avgrate }.first(10).each do |rest| %>
+							<tr class="clearfix"><td class="rest-name"><a href="#"><%= rest.name %></a></td><td class="rating"><%= rest.avgrate.round(1) %> / 5.0</td><td><span class="<%= rest.id %>avgrate star"></span></td></tr>
+						<% end %>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="reviews container"> <!-- REVIEWS -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="c-title">
+						<h2>Каталог заведений:</h2>
+					</div>
+				</div>
+			</div>
+			<div class="restaurants"><!-- RESTAURANTS -->
+				<% @restaurants.search(params[:search]).reverse.each do |rest| %>
+				<div class="restaurant"><!-- RESTAURANT -->
+					<div class="row">
+						<div class="col-md-4">
+							<a href="#"><%= cl_image_tag(rest.photos.first.path, {size: '500x250', crop: :fit, class: "img-responsive"}) if rest.photos.first != nil %></a>
+						</div>
+						<div class="col-md-4">
+							<h3 class="r-name"><%= rest.name %></h3>
+							<p><%= rest.review.truncate(300) %></p>
+							<%= link_to 'Подробнее', review_path(rest), :class => "btn btn-primary" %>
+							<% if admin_signed_in? %>
+							<%= link_to 'Редактировать', edit_review_path(rest), :class => "btn btn-success" %>
+							<%= link_to 'Удалить', review_path(rest), method: :delete, data: {}, :class => "btn btn-danger" %>
+							<% end %>
+						</div>
+						<div class="col-md-4">
+							<div class="adress">
+								<h4><%= rest.address %></h4>
+							</div>
+							<div class="info">
+								<table>
+									<tr class="clearfix">
+										<td>Кухня:</td><td class="star"><span class="<%= rest.id %>mark1"></span></td>
+									</tr>
+									<tr class="clearfix">
+										<td>Интерьер:</td><td class="star"><span class="<%= rest.id %>mark2"></span></td>
+									</tr>
+									<tr class="clearfix">
+										<td>Обслуживание:</td><td class="star"><span class="<%= rest.id %>mark3"></span></td>
+									</tr>
+									<tr class="clearfix">
+										<td>Общая оценка:</td><td class="rating"><span class="<%= rest.id %>avgrate"></span><br /><%= rest.avgrate.round(1) %> из 5.0</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div><!-- END RESTAURANT -->
+				<% end %>
+			</div><!-- END RESTAURANTS -->
+		</div><!-- END REVIEWS -->
+	</div><!-- END C-MAIN -->
+</div><!-- END CONTENT -->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="container">
-            <div class="row modal-body">
-                <div class="col-md-6">
-                    <img src="assets/mentor.jpg" class="img-responsive" alt="Виталий Лебедев">
-                </div>
-                <div class="col-md-6">
-                    <!-- Project Details Go Here -->
-                    <h2>О нас</h2>
-                    <p class="item-intro text-muted">Виталий Лебедев, ресторанный критик, писатель. Учился в Odessa State Environmental University. Работал в DataArt как back-end (PHP) and front-end (JavaScript + (X)HTML) developer. Занимался волонтёрской деятельностью – обучал и координировал работу начинающих IT-специалистов.</p>
-                    <p>После того, как ему надоело отвечать на глупые письма конкурсантов и разбирать бредовый код, он начал сотрудничать со многими журналами и газетами. Написал несколько книг на кулинарную тематику. Последние несколько лет темы статей ограничивает ресторанами. Проводит семинары на тему «Ресторанный бизнес». Недавно покинул издание, с которым сотрудничал долгое время, и решил создать свой собственный проект.</p> 
-                    <h3>«Для меня ресторан – это в первую очередь люди. Я хочу, чтобы они получали удовольстивие».</h3>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="modal-content">
+		<div class="container">
+			<div class="row modal-body">
+				<div class="col-md-6">
+					<img src="assets/mentor.jpg" class="img-responsive" alt="Виталий Лебедев">
+				</div>
+				<div class="col-md-6">
+					<!-- Project Details Go Here -->
+					<h2>О нас</h2>
+					<p class="item-intro text-muted">Виталий Лебедев, ресторанный критик, писатель. Учился в Odessa State Environmental University. Работал в DataArt как back-end (PHP) and front-end (JavaScript + (X)HTML) developer. Занимался волонтёрской деятельностью – обучал и координировал работу начинающих IT-специалистов.</p>
+					<p>После того, как ему надоело отвечать на глупые письма конкурсантов и разбирать бредовый код, он начал сотрудничать со многими журналами и газетами. Написал несколько книг на кулинарную тематику. Последние несколько лет темы статей ограничивает ресторанами. Проводит семинары на тему «Ресторанный бизнес». Недавно покинул издание, с которым сотрудничал долгое время, и решил создать свой собственный проект.</p> 
+					<h3>«Для меня ресторан – это в первую очередь люди. Я хочу, чтобы они получали удовольстивие».</h3>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="container">
-            <div class="row modal-body">
-                <div class="col-lg-8 col-lg-offset-2">
-                        <!-- Project Details Go Here -->
-                        <h2>Ukraine, RESTguide </h2>
-                        <p class="item-intro text-muted">Home office</p>
-                        <iframe style="width:768px;height:380px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&q= DataArt, ODESSA,&ie=UTF8&t=roadmap&z=13&iwloc=B&output=embed"></iframe>
-                        <br /><button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
-                    </div>
-            </div>
-        </div>
-    </div>
+	<div class="modal-content">
+		<div class="container">
+			<div class="row modal-body">
+				<div class="col-lg-8 col-lg-offset-2">
+						<!-- Project Details Go Here -->
+						<h2>Ukraine, RESTguide </h2>
+						<p class="item-intro text-muted">Home office</p>
+						<iframe style="width:768px;height:380px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&q= DataArt, ODESSA,&ie=UTF8&t=roadmap&z=13&iwloc=B&output=embed"></iframe>
+						<br /><button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть</button>
+					</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- Plugin JavaScript -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

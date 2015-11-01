@@ -1,5 +1,6 @@
 #= require map
 #= require rate
+#= require mainPage
 
 # Script file for the main page
 

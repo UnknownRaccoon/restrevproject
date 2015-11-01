@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Restguide</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="description" content="">
- <meta name="author" content="">
- <script src="https://maps.googleapis.com/maps/api/js?language=ru-RU"></script>
- <%= stylesheet_link_tag 'application', params[:controller] + params[:action], media: 'all', 'data-turbolinks-track' => true %>
- <%= Gon::Base.render_data %>
- <%= javascript_include_tag 'application', params[:controller] + params[:action], 'data-turbolinks-track' => true %>
- <%= cloudinary_js_config %>
- <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+	<title>Restguide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<script src="https://maps.googleapis.com/maps/api/js?language=ru-RU"></script>
+	<%= stylesheet_link_tag 'application', params[:controller] + params[:action], media: 'all', 'data-turbolinks-track' => true %>
+	<%= Gon::Base.render_data %>
+	<%= javascript_include_tag 'application', params[:controller] + params[:action], 'data-turbolinks-track' => true %>
+	<%= cloudinary_js_config %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-    <nav class="navbar-default navbar-fixed-top">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img alt="RG" src=<%= asset_path('emblem-small.png') %>></a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-menu">
-                <span class="sr-only">Открыть навигацию</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="responsive-menu">
-            <ul class="nav navbar-nav">
-                <li><%= link_to 'Главная', root_path + "#content" %></li>
-                <li><%= link_to 'О нас', root_path + "#portfolioModal1", :class => "portfolio-link", "data-toggle" => "modal" %></li>
-                <li><%= link_to 'Контакты', root_path + "#portfolioModal2", :class => "portfolio-link", "data-toggle" => "modal" %></li>
-                <li><%= link_to 'Написать новую рецензию', new_review_path if admin_signed_in? %></li>
-            </ul>
-        <%= form_tag root_path, :method => 'get', :id => "reviews_search", :class => "navbar-form navbar-right" do %>
-            <p class="form-group">
-                <%= text_field_tag :search, params[:search], :class => "form-control" %>
-                <%= submit_tag "Найти", :name => nil, :class => "btn btn-default" %>
-            </p>
-            <%= hidden_field_tag :sort, params[:sort] %>
-        <% end %>
-    </div>
-</nav>
-<!-- END NAV -->
+	<!-- HEADER -->
+	<div class="header">
+		<div class="top-nav">
+			<nav class="navbar-inverse navbar-fixed-top">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#"><img alt="RG" src=<%= asset_path('emblem-small.png') %>></a>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-menu">
+							<span class="sr-only">Открыть навигацию</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="responsive-menu">
+						<ul class="nav navbar-nav">
+							<li><%= link_to 'Главная', root_path + "#content" %></li>
+							<li><%= link_to 'О нас', root_path + "#portfolioModal1", :class => "portfolio-link", "data-toggle" => "modal" %></li>
+							<li><%= link_to 'Контакты', root_path + "#portfolioModal2", :class => "portfolio-link", "data-toggle" => "modal" %></li>
+							<li><%= link_to 'Написать новую рецензию', new_review_path if admin_signed_in? %></li>
+						</ul>
+					<%= form_tag root_path, :method => 'get', :id => "reviews_search", :class => "navbar-form navbar-left", :role => "search" do %>
+						<div class="form-group">
+							<%= text_field_tag :search, params[:search], :class => "form-control" %>
+							<%= submit_tag "Найти", :name => nil, :class => "btn btn-default" %>
+						</div>
+						<%= hidden_field_tag :sort, params[:sort] %>
+					<% end %>
+					</div>
+			</nav>
+		</div>
+	</div>
+	<!-- END HEADER -->
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <span class="copyright">Copyright &copy; Restguide. 2015</span>
-            </div>
-            <div class="col-md-4 col-md-offset-4">
-                <span class="copyright">Folgen Team</span>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="copyright">Copyright &copy; Restguide. 2015</span>
+			</div>
+			<div class="col-md-4 col-md-offset-4">
+				<span class="copyright">Folgen Team</span>
+			</div>
+		</div>
+	</div>
 </footer>
 </body>
 </html>
