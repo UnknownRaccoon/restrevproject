@@ -17,6 +17,8 @@ gem 'attachinary'
 gem 'slimbox2-rails'
 
 gem 'gon'
+# for debugger
+gem 'pry'
 
 # Required by Haroku
 gem 'rails_12factor'

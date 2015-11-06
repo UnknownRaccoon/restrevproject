@@ -3,6 +3,7 @@ class Review < ActiveRecord::Base
     validates :name, presence: true, length: {maximum: 50}
     validates :address, presence: true, length: {in: 5..100}
     validates :review, presence: true, length: {minimum: 50}
+    validates :indexKeyWords, presence: true
     validate :custom_validation
 
     def custom_validation
@@ -15,7 +16,7 @@ class Review < ActiveRecord::Base
 
     def self.search(search)
         if search
-            where('name LIKE ?', "%#{search}%") 
+            where('name LIKE ?', "%#{search}%")
         else
             all
         end
