@@ -1,0 +1,5 @@
+class AddKeywordsToreviews < ActiveRecord::Migration
+  t.string :keywords, :null => false, :limit => 1, :default => ''  def change
+
+  end
+end

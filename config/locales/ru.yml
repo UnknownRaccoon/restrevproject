@@ -32,6 +32,7 @@ ru:
                 mark1: Кухня
                 mark2: Интерьер
                 mark3: Обслуживание
+                indexKeyWords:  MyindexKeyWordsFromlocalase
     helpers:
         submit:
             review:

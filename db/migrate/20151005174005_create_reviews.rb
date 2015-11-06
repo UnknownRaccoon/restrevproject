@@ -10,7 +10,6 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :mark1, :null => false, :limit => 1
       t.integer :mark2, :null => false, :limit => 1
       t.integer :mark3, :null => false, :limit => 1
-
       t.timestamps null: false
     end
   end
