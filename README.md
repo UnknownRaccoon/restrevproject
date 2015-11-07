@@ -17,4 +17,4 @@ Admin login url http://restrev.herokuapp.com/admins/login
 Login: mrmrmrtest@gmail.com
 pass: testtest
 
-
+https://docs.google.com/document/d/1bOJYpsXHddUY_Y-f1ULEE64btZq-nRijn4BLuUIYQ98 - Test Plan
