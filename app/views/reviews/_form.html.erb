@@ -1,4 +1,4 @@
-require 'pry'
+
 <%= form_for @review do |f| %>
     <% if @review.errors.any? %>
         <div id="error_explanation">
@@ -16,6 +16,7 @@ require 'pry'
                 <%= f.label :address %><br />
                 <%= f.text_field :address %><br />
                 <%= f.label :name %><br />
+                <%= f.text_field :name %><br />
                 <%= f.label :keywords %><br />
                 <%= f.text_field :keywords %><br />
                 <%= f.label :review %><br />
