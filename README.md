@@ -11,5 +11,10 @@ http://dataart.forum2x2.net - forum DataArt
 
 https://docs.google.com/uc?id=0B00hQySL53YAMWpwck14eVFPbTQ&export=download -  Folgen Team Work Environment
 
-https://trello.com - Kanban board(test)
+https://trello.com/b/F6Tm3A0u/restrevproj - Kanban board
+
+Admin login url http://restrev.herokuapp.com/admins/login
+Login: mrmrmrtest@gmail.com
+pass: testtest
+
 
