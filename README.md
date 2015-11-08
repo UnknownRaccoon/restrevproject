@@ -19,4 +19,6 @@ pass: testtest
 
 https://docs.google.com/document/d/1bOJYpsXHddUY_Y-f1ULEE64btZq-nRijn4BLuUIYQ98 - Test Plan
 
-https://docs.google.com/spreadsheets/d/12Kg44lhJhrmdFBfLFurSS5a1pE2VPdEUZ_LCsBLuGbc/edit?usp=sharing - Test Case login
+https://docs.google.com/spreadsheets/d/12Kg44lhJhrmdFBfLFurSS5a1pE2VPdEUZ_LCsBLuGbc/edit?usp=sharing - Test Case login 
+
+https://docs.google.com/spreadsheets/d/1SfCmilbR6HfT2MV56AeRfsZUcRou0Gc7Ojh3_kjepAs/edit#gid=1276078184  -Checklist
