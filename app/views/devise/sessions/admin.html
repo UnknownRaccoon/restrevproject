@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Restguide</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- HEADER -->
+	<div class="header">
+		<div class="top-nav">
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-menu">
+						<span class="sr-only">Открыть навигацию</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="responsive-menu">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+						<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						</form>
+				</div>
+			</div>
+		</div>
+	</div> <!-- END HEADER -->
+<!-- VIDEO -->
+	<div class="intro-text">
+		<video autoplay loop muted class="bgvideo" id="bgvideo">
+			<source src="v/header.webm" type="video/webm"></source>
+			<source src="v/header.mp4" type="video/mp4"></source>
+			<source src="v/header.ogv" type="video/webm"></source>
+		</video>
+		<div class="sign-up">
+				<div class="s-title">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> I agree with <a href="#">terms & conditions</a>
+							</label>
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+	</div>
+<!-- FOOTER -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<span class="copyright">Copyright &copy; Restguide. 2015</span>
+				</div>
+				<div class="col-md-4 col-md-offset-4">
+					<span class="copyright">Folgen Team</span>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END FOOTER -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
+
+
