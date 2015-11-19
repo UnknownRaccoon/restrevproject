@@ -1,7 +1,4 @@
-#= require rate
-#= require map
-
-window.onload = ->
+$(document).ready ->
     rate gon.restaurant, false
     $('.attachinary-input').attachinary()
 

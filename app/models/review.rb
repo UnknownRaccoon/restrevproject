@@ -2,7 +2,7 @@ class Review < ActiveRecord::Base
     has_attachments :photos, maximum: 15
     validates :name, presence: true, length: {maximum: 50}
     validates :address, presence: true, length: {in: 5..100}
-    validates :review, presence: true, length: {minimum: 50}
+    validates :review, presence: true
     validate :custom_validation
 
     def custom_validation

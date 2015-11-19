@@ -21,7 +21,7 @@
         </div>
         <div class="sol-sm-5 top10">
             <table class="table">
-                <% @restaurants.sort { |a,b| b.avgrate <=> a.avgrate }.first(10).each do |rest| %>
+                <% @top10.each do |rest| %>
                     <tr><td><a href="#"><%= rest.name %></a></td><td><span class="<%= rest.id %>avgrate"></span></td><td><%= rest.avgrate.round(1) %> / 5.0</td></tr>
                 <% end %>
             </table>
@@ -32,7 +32,7 @@
             <h1 class="">Каталог заведений:</h1>
         </div>
     </div>
-    <% @restaurants.search(params[:search]).reverse.each do |rest| %>
+    <% @restaurants.each do |rest| %>
         <div class="row">
             <div class="col-sm-5">
                 <a href="#"><%= cl_image_tag(rest.photos.first.path, {size: '500x250', crop: :fit, class: "img-responsive"}) if rest.photos.first != nil %></a>
@@ -72,7 +72,7 @@
         <div class="container">
             <div class="row modal-body">
                 <div class="col-md-6">
-                    <img src="assets/mentor.jpg" class="img-responsive" alt="Виталий Лебедев">
+                    <%= image_tag "mentor.jpg", class: "img-responsive", alt: "Виталий Лебедев" %>
                 </div>
                 <div class="col-md-6">
                     <!-- Project Details Go Here -->
@@ -101,7 +101,3 @@
         </div>
     </div>
 </div>
-<!-- Plugin JavaScript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="assets/classie.js"></script>
-<script src="assets/cbpAnimatedHeader.js"></script>

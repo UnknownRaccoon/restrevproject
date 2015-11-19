@@ -1,22 +1,27 @@
-#= require map
-#= require rate
-
-# Script file for the main page
-
 rev = JSON.parse gon.restaurants
 
-window.onload = ->      # Loading
-    rate r for r in rev # the ratings
-    if not $('.alert').is(':empty')
-        $('.alert').show
-    if not $('.notice').is(':empty')
-        $('.notice').show
-    $('a.page-scroll').bind 'click',(event) -> 
-        $anchor = $(this)
-        $('html, body').stop().animate(
+$(document).ready ->
+    rate r for r in rev
+    $('a.page-scroll').bind 'click', (event) -> 
+        $anchor = $ this
+        $('html, body').stop().animate
             scrollTop: $($anchor.attr('href')).offset().top - 60
-        , 1500, 'easeInOutExpo')
+        , 1500, 'easeInOutExpo'
         event.preventDefault()
+    didScroll = false
+    init = ->
+        window.addEventListener 'scroll', (event) ->
+            if not didScroll
+                didScroll = true
+                setTimeout scrollPage, 250
+        , false
+    scrollPage = ->
+        sy = scrollY()
+        if sy >= 300 then $('.navbar-default').addClass 'navbar-shrink' else $('.navbar-default').removeClass 'navbar-shrink'
+        didScroll = false
+    scrollY = ->
+        return window.pageYOffset || document.documentElement.scrollTop
+    init()
 
 google.maps.event.addDomListener window, 'load', ->
     initmap()
@@ -36,5 +41,3 @@ google.maps.event.addDomListener window, 'load', ->
                     infoW.open map, this
                     break
         markers["<a href='reviews/#{r.id}'>#{r.name}</a><br /><small>#{r.address}</small><br />#{r.comment}"] = marker
-
-
