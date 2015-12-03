@@ -1,30 +1,38 @@
-
-  <div class="sign-up">
+  <div class="intro-text">
+    <video autoplay loop muted class="bgvideo" id="bgvideo">
+      <source src="../assets/header.webm" type="video/webm"></source>
+      <source src="../assets/header.mp4" type="video/mp4"></source>
+      <source src="../assets/header.ogv" type="video/webm"></source>
+    </video>
+    <div class="sign-up">
       <div class="s-title">
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group">
+                <div class="field">
+                  <%= f.label :email %><br />
+                  <%= f.email_field :email, autofocus: true, :class => "form-control", :type => "email", :placeholder => "Email" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="field">
+                  <%= f.label :password %><br />
+                  <%= f.password_field :password, autocomplete: "off", :class => "form-control", :type => "password", :placeholder => "Password" %>
+                </div>
+            </div>
+            <div class="checkbox">
+                <% if devise_mapping.rememberable? -%>
+                  <div class="field">
+                    <%= f.check_box :remember_me, :type => "checkbox" %>
+                    <%= f.label :remember_me %>
+                  </div>
+                <% end -%>
+            </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+              <div class="actions">
+                <%= f.submit "Log in", :class => "btn btn-default" %>
+              </div>
+          <% end %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<%= render "devise/shared/links" %>     </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-
-</div>
-</div>
-<%= javascript_include_tag "custom" %>
