@@ -18,9 +18,9 @@ $(document).ready(function(){
 	$("#dowm").click(function (event) {
 		event.preventDefault();
 
-		var id  = $(this).attr('href'),
+		var id  = $(this).attr('href');
 
-			top = $(id).offset().top - 40;
+		var top = $(id).offset().top - 400;
 		
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
