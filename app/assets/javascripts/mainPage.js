@@ -1,5 +1,3 @@
-
-
 // TOP NAV
 $(document).ready(function() {
 	var h = $(window).height();
@@ -20,20 +18,10 @@ $(document).ready(function(){
 
 		var id  = $(this).attr('href');
 
-		var top = $(id).offset().top - 400;
+		var top = $(id).offset().top - 40;
 		
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
 });
 // END CENTER BUTTON
 
-// TOP NAV FONT SIZE
-$(document).ready(function() {
-	$('.navbar-inverse .navbar-nav li').hover(
-		function(){
-			$(this).animate({fontSize: 18}, 100);
-		}, function(){
-			$(this).animate({fontSize: 14}, 100);
-		});
-})
-// END TOP NAV FONT SIZE
