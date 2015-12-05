@@ -71,12 +71,15 @@ header {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #8E7D40;
+    color: #4E0922;
     text-transform: uppercase;
 }
 
-.navbar-inverse .navbar-nav > li:hover a {
-    color: #F18500;
+.navbar-inverse .navbar-nav > li a:hover {
+    color: #FFE200;
+    background-color: transparent;
+    font-size: 18px;
+    transition: all 0.1s ease-in-out;
 }
 
 .intro-text .intro-lead-in {
