@@ -41,8 +41,11 @@ header {
 	text-transform: uppercase;
 }
 
-.navbar-inverse .navbar-nav > li:hover a {
-	color: #F18500;
+.navbar-inverse .navbar-nav > li a:hover {
+	color: #FFE200;
+	background-color: transparent;
+	font-size: 18px;
+	transition: all 0.1s ease-in-out;
 }
 
 .intro-text .intro-lead-in {
@@ -117,7 +120,6 @@ header {
 .star {
 	width: 80px;
 	height: 16px;
-	background: url(../img/star-off.png);
 	float: right;
 }
 
