@@ -1,11 +1,6 @@
 <!-- VIDEO -->
 	<div class="intro-text">
-                <%= video_tag ["trailer.webm", "trailer.mp4", "trailer.ogv"], class: 'bgvideo', id: 'bgvideo' %>
-		<video autoplay loop muted class="bgvideo" id="bgvideo">
-			<source src="assets/header.webm" type="video/webm"></source>
-			<source src="assets/header.mp4" type="video/mp4"></source>
-			<source src="assets/header.ogv" type="video/webm"></source>
-		</video>
+		<%= video_tag ["assets/header.webm", "assets/header.mp4", "assets/header.ogv"], loop: 'true', autoplay: 'true', class: 'bgvideo', id: 'bgvideo' %>
 		<div class="txt-block">
 			<div class="intro-lead-in">Добро пожаловать в RESTguide!</div>
 			<div class="intro-heading">Проведи время</div>
