@@ -1,0 +1,275 @@
+/* line 1, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+hr {
+  border-color: #C4C4C4;
+}
+
+/* line 5, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.content {
+  background: #FDFDFD;
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 4px 1px #dbdbdb;
+}
+
+/* line 12, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.c-main {
+  margin-bottom: 20px;
+}
+
+/* line 16, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.top10 {
+  overflow: hidden;
+}
+
+/* line 21, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+header {
+  text-align: center;
+  color: #fff;
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: none;
+  background-image: url(header1.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/* line 34, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.btn-xl {
+  padding: 20px 40px;
+  border-color: #FFCC00;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #FFCC00;
+}
+
+/* line 46, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  border-color: #f6bf01;
+  color: #fff;
+  background-color: #fec503;
+}
+
+/* line 56, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+
+/* line 62, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+  border-color: #FFCC00;
+  background-color: #FFCC00;
+}
+
+/* line 81, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.btn-xl .badge {
+  color: #FFCC00;
+  background-color: #fff;
+}
+
+/* line 86, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default {
+  border-color: transparent;
+  background-color: #222;
+  margin-bottom: 100px;
+}
+
+/* line 92, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-brand {
+  font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+  color: #FFCC00;
+}
+
+/* line 97, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+  color: #fec503;
+}
+
+/* line 104, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-collapse {
+  border-color: rgba(255, 255, 255, 0.02);
+}
+
+/* line 108, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-toggle {
+  border-color: #FFCC00;
+  background-color: #FFCC00;
+}
+
+/* line 113, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+/* line 117, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #FFCC00;
+}
+
+/* line 122, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .nav li a {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* line 130, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+  outline: 0;
+  color: #FFCC00;
+}
+
+/* line 136, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-nav > .active > a {
+  border-radius: 0;
+  color: #fff;
+  background-color: #FFCC00;
+}
+
+/* line 142, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #fec503;
+}
+
+@media (min-width: 768px) {
+  /* line 149, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  .navbar-default {
+    padding: 25px 0;
+    border: 0;
+    background-color: transparent;
+    -webkit-transition: padding .3s;
+    -moz-transition: padding .3s;
+    transition: padding .3s;
+    margin-bottom: 100px;
+  }
+
+  /* line 159, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  .navbar-default .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+  }
+
+  /* line 166, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  .navbar-default .navbar-nav > .active > a {
+    border-radius: 3px;
+  }
+
+  /* line 170, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  .navbar-default.navbar-shrink {
+    padding: 10px 0;
+    background-color: #222;
+  }
+
+  /* line 175, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  .navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+/* line 180, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+header .intro-text {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+/* line 185, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+header .intro-text .intro-lead-in {
+  margin-bottom: 25px;
+  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 22px;
+}
+
+/* line 193, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+header .intro-text .intro-heading {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+@media (min-width: 768px) {
+  /* line 203, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  header .intro-text {
+    padding-top: 150px;
+    padding-bottom: 350px;
+  }
+
+  /* line 208, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+  }
+
+  /* line 216, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  header .intro-text .intro-heading {
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+  }
+}
+/* line 226, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+#portfolio .portfolio-item {
+  right: 0;
+  margin: 0 0 15px;
+}
+
+/* line 231, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+#portfolio * {
+  z-index: 2;
+}
+
+@media (min-width: 767px) {
+  /* line 236, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+/* line 241, /home/sergey/Documents/restrevproject/app/assets/stylesheets/mainpageindex.scss */
+.headimg {
+  width: 100%;
+}
