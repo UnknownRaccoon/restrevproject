@@ -1,6 +1,7 @@
-window.onload=->
+$(document).ready ->
     rate gon.restaurant, false
     $('.attachinary-input').attachinary()
+  
 
 google.maps.event.addDomListener window, 'load', ->
     initmap()
@@ -9,8 +10,8 @@ google.maps.event.addDomListener window, 'load', ->
         animation: google.maps.Animation.DROP
         draggable: true
         position:
-            lat: gon.restaurant.x
-            lng: gon.restaurant.y
+            lat: gon.restaurant.x || 30.7396057
+            lng: gon.restaurant.y || 30.7396057
 
     # Saving coordinates to inputs by clicking the map or dragging the marker
     google.maps.event.addListener map, 'click', (event) ->
