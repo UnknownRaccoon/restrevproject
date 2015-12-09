@@ -117,6 +117,11 @@ header {
 	display: inline-block;
 }
 
+.restaurant {
+	border-bottom: 1px solid #eeeeee;
+	padding: 15px 0;
+}
+
 .star {
 	width: 105px;
 	height: 16px;
@@ -129,9 +134,8 @@ header {
 	width: 105px;
 }
 
-.restaurant {
-	border-bottom: 1px solid #eeeeee;
-	padding: 15px 0;
+.restaurant .rating {
+	margin-top: 18px;
 }
 
 .r-name {
