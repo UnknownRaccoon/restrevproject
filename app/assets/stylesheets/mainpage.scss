@@ -229,3 +229,13 @@ header {
 		margin-bottom: 3px;
 	}
 }
+
+
+/*Media Queries*/
+
+@media only screen and (max-width : 480px) {
+	.top-rest .rating {
+		margin-left: -108px;
+		padding-top: 32px !important;
+	}
+}
