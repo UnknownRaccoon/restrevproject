@@ -187,6 +187,11 @@ header {
 
 /*MEDIA QUIRIES*/
 @media only screen and (max-width : 992px) {
+	.navbar-nav>li {
+		padding: 0;
+	}
+
+
 	.intro-text .intro-lead-in {
 		font-size: 30px;
 	}
