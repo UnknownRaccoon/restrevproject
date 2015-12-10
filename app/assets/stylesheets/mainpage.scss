@@ -203,6 +203,18 @@ header {
 
 @media only screen and (max-width : 768px) {
 
+	.navbar-inverse .navbar-collapse {
+		background: rgba(60, 57, 57, 0.93);
+	}
+
+	.navbar-inverse .navbar-nav>li>a {
+		color: #fff;
+	}
+
+	.form-control {
+		margin-bottom: 10px;
+	}
+
 	.txt-block {
 		top: 25%;
 	}
