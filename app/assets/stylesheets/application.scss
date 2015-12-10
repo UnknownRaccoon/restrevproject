@@ -38,6 +38,8 @@ ul, ol {list-style: none; padding: 0;}
 body {
     overflow-x: hidden;
     background: #eee;
+    position: relative;
+    margin-bottom: 130px;
 }
 
 /*HEADER*/
@@ -197,7 +199,7 @@ header {
     background: transparent;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: -130px;
 }
 
 .footer span.copyright {
