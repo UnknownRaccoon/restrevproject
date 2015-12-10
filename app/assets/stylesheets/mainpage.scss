@@ -172,7 +172,7 @@ header {
 
 .txt-block {
 	position: absolute;
-	top: 31%;
+	top: 29%;
 	right: 0;
 	left: 0;
 	display: block;
@@ -213,37 +213,41 @@ header {
 }
 
 @media only screen and (max-width : 480px) {
+	h2 {
+		font-size: 25px;
+	}
+
 	.intro-text .intro-lead-in {
-		font-size: 15px;
-		line-height: 49px;
+		font-size: 14px;
+		line-height: 38px;
 	}
 
 	.intro-text .intro-heading {
-		font-size: 25px;
+		font-size: 20px;
 		line-height: 7px;
 	}
 
 	#dowm {
 		padding: 9px 20px;
-		font-size: 17px;
+		font-size: 11px;
 	}
 
 	.navbar.navbar-inverse.navbar-fixed-top {
-		min-height: 35px;
+		height: 44px;
 	}
 
 	button.navbar-toggle.collapsed {
 		margin-top: 3px;
 		margin-bottom: 3px;
 	}
-}
 
+	#content {
+		padding-top: 30px;
+	}
 
-/*Media Queries*/
-
-@media only screen and (max-width : 480px) {
 	.top-rest .rating {
 		margin-left: -108px;
 		padding-top: 32px !important;
 	}
 }
+
