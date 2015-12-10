@@ -172,7 +172,7 @@ header {
 
 .txt-block {
 	position: absolute;
-	top: 29%;
+	top: 31%;
 	right: 0;
 	left: 0;
 	display: block;
@@ -197,18 +197,25 @@ header {
 }
 
 @media only screen and (max-width : 768px) {
+
+	.txt-block {
+		top: 25%;
+	}
+
 	.intro-text .intro-lead-in {
 		font-size: 23px;
 		margin-bottom: 0;
+		line-height: 20px;
 	}
 
 	.intro-text .intro-heading {
-		font-size: 48px;
-		margin-bottom: 28px;
+		font-size: 43px;
+		margin-bottom: 14px;
 	}
 
 	#dowm {
 		padding: 17px 32px;
+		font-size: 16px;
 	}
 }
 
