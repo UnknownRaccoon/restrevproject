@@ -191,7 +191,6 @@ header {
 		padding: 0;
 	}
 
-
 	.intro-text .intro-lead-in {
 		font-size: 30px;
 	}
@@ -202,6 +201,14 @@ header {
 }
 
 @media only screen and (max-width : 768px) {
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #fff;
+    }
+
+    .form-control {
+        margin-bottom: 10px;
+    }
 
 	.txt-block {
 		top: 25%;

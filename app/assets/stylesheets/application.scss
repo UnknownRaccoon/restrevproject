@@ -220,6 +220,10 @@ header {
 
 /*MEDIA QUIRIES*/
 @media only screen and (max-width : 992px) {
+    .navbar-nav>li {
+        padding: 0;
+    }
+
     .intro-text .intro-lead-in {
         font-size: 30px;
     }
@@ -242,6 +246,7 @@ header {
     .form-control {
         margin-bottom: 10px;
     }
+
     .intro-text .intro-lead-in {
         font-size: 23px;
         margin-bottom: 0;
@@ -258,6 +263,10 @@ header {
 }
 
 @media only screen and (max-width : 480px) {
+    h2 {
+        font-size: 25px;
+    }
+
     .intro-text .intro-lead-in {
         font-size: 15px;
         line-height: 49px;
@@ -268,10 +277,6 @@ header {
         line-height: 7px;
     }
 
-    #dowm {
-        padding: 9px 20px;
-        font-size: 17px;
-    }
 
     .navbar.navbar-inverse.navbar-fixed-top {
         min-height: 35px;
