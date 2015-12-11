@@ -303,7 +303,8 @@ header {
          -moz-border-radius: 7px;
              -o-border-radius: 7px;
                     border-radius: 7px;
-    width: 517px;
+    max-width: 517px;
+    width: 58%;
     border: 1px solid #c7c7c7;
     padding: 10px;
     position: absolute;
@@ -317,4 +318,8 @@ header {
 
 .checkbox label {
     padding-left: 0;
+}
+
+@media only screen and (max-width : 786px) {
+    
 }
