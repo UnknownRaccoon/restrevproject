@@ -35,6 +35,12 @@
 /*COMMON*/
 ul, ol {list-style: none; padding: 0;}
 
+html {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 90px;
+}
+
 body {
     overflow-x: hidden;
     background: #eee;
