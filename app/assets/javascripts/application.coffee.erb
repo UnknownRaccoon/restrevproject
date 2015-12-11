@@ -13,17 +13,17 @@
 
 # The script loads the map and centers it to the user's position. If geolocation fails the map will focus on the center of Odessa
 window.initmap = ->
-    showmap = (latl, lngl) ->
+  showmap = (latl, lngl) ->
         window.map = new google.maps.Map document.getElementById('map'),
         center:
-            lat: latl
-            lng: lngl
+            lat: 46.4711427
+            lng: 30.7396057
         zoom: 15
-    if not (navigator.geolocation.getCurrentPosition (position) ->
-        showmap position.coords.latitude, position.coords.longitude
-    , ->
-        showmap 46.4711427, 30.7396057)
-        showmap 46.4711427, 30.7396057
+    #if not (navigator.geolocation.getCurrentPosition (position) ->
+    #    showmap position.coords.latitude, position.coords.longitude
+    #, ->
+    #    showmap 46.4711427, 30.7396057)
+   showmap 46.4711427, 30.7396057
 
 # Displaying the ratings
 window.rate = (r, ro = true) ->
@@ -47,9 +47,9 @@ window.rate = (r, ro = true) ->
         readOnly: true
     # Saving selected values to inputs if creating/editing a review
     if not ro
-        $('#mark1 > img').click ->
-            $('input[name="review[mark1]"]').val $(this).attr 'alt'
-        $('#mark2 > img').click ->
-            $('input[name="review[mark2]"]').val $(this).attr 'alt'
-        $('#mark3 > img').click ->
-            $('input[name="review[mark3]"]').val $(this).attr 'alt'
+        $('.mark1 img').click ->
+            $('input[name="review[mark1]"]').val $('.mark1 input').attr 'value'
+        $('.mark2 img').click ->
+            $('input[name="review[mark2]"]').val $('.mark2 input').attr 'value'
+        $('.mark3 img').click ->
+            $('input[name="review[mark3]"]').val $('.mark3 input').attr 'value'

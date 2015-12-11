@@ -1,7 +1,8 @@
+
 $(document).ready ->
     rate gon.restaurant, false
     $('.attachinary-input').attachinary()
-  
+
 
 google.maps.event.addDomListener window, 'load', ->
     initmap()
@@ -25,7 +26,6 @@ google.maps.event.addDomListener window, 'load', ->
         $('#lng').val event.latLng.lng()
         geocodeLatLng marker.getPosition
 
-# Getting address from marker's location
 geocodeLatLng = (pos) ->
     $.ajax('https://geocode-maps.yandex.ru/1.x/',
         data:

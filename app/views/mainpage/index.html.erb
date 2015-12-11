@@ -32,7 +32,7 @@
 					<table class="table">
 						<% @top10.each do |rest| %>
 							<tr class="clearfix">
-								<td class="rest-name"><a href="#"><%= rest.name %></a></td>
+								<td class="rest-name"><%=link_to rest.name, review_path(rest) %></td>
 								<td><span class="<%= rest.id %>avgrate star"></span></td>
 								<td class="rating"><%= rest.avgrate.round(1) %> / 5.0</td>
 							</tr>
