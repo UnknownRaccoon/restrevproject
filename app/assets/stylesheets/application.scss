@@ -44,6 +44,13 @@ html {
 body {
     overflow-x: hidden;
     background: #eee;
+    background-image: url(../../../videos/res.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /*HEADER*/
