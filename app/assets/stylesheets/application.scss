@@ -335,3 +335,42 @@ header {
 		display: none;
 	}
 }
+
+/*NEW REVIEW*/
+
+.block-title {
+	text-align: center;
+	margin: 15px 0;
+}
+
+.review-form {
+	background: rgba(238, 238, 238, 0.71);
+	-webkit-box-shadow:inset 0px 0px 9px #000000;
+		 -moz-box-shadow:inset 0px 0px 9px #000000;
+					box-shadow:inset 0px 0px 9px #000000;
+	-webkit-border-radius: 7px;
+		 -moz-border-radius: 7px;
+			 -o-border-radius: 7px;
+					border-radius: 7px;
+	max-width: 517px;
+	width: 90%;
+	border: 1px solid #c7c7c7;
+	padding: 10px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.nr-map {
+	float: right;
+}
+
+.nr-inp {
+	float: left;
+}
+
+@media only screen and (max-width : 768px) {
+	.nr-map,
+	.nr-inp {
+		float: none;
+	}
+}
