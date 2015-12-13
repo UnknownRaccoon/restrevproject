@@ -343,7 +343,8 @@ header {
 
 .block-title {
 	text-align: center;
-	margin: 15px 0;
+	margin: -15px 0 15px;
+	color: #ded522;
 }
 
 .review-form {
@@ -355,12 +356,11 @@ header {
 		 -moz-border-radius: 7px;
 			 -o-border-radius: 7px;
 					border-radius: 7px;
-	max-width: 517px;
 	width: 90%;
 	border: 1px solid #c7c7c7;
 	padding: 10px;
 	text-align: left;
-	margin: 0 auto;
+	margin: 0 auto 48px;
 }
 
 .nr-map {
