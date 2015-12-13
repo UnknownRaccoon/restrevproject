@@ -191,8 +191,17 @@ header {
 
 /*MEDIA QUIRIES*/
 @media only screen and (max-width : 992px) {
+
+	body {
+		background-image: none;
+	}
+
 	.navbar-nav>li {
 		padding: 0;
+	}
+
+	.intro-text {
+		display: block;
 	}
 
 	.intro-text .intro-lead-in {

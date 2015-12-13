@@ -94,6 +94,12 @@ header {
 	transition: all 0.1s ease-in-out;
 }
 
+.intro-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .intro-text .intro-lead-in {
 	margin-bottom: 25px;
 	font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -307,11 +313,7 @@ header {
 	width: 58%;
 	border: 1px solid #c7c7c7;
 	padding: 10px;
-	position: absolute;
 	text-align: center;
-	top: 20%;
-	left: 0;
-	right: 0;
 	margin: 0 auto;
 	background: rgba(238, 238, 238, 0.71);
 }
