@@ -26,9 +26,8 @@ google.maps.event.addDomListener window, 'load', ->
         console.log("pos unavialeble")
       if navigator.geolocation
          navigator.geolocation.getCurrentPosition succ,er,options
-         map1 = succ
       else
-         map1 = showmap 46.4711427, 30.7396057
+         showmap 46.4711427, 30.7396057
 
       showmap = (latl, lngl) ->
              map = new google.maps.Map document.getElementById('map'),

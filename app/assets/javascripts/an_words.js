@@ -5,15 +5,22 @@ var count;
 var reviewText;
 var keywordsList;
 var resultKeyword;
+var textName;
+var textAdr;
+textName=document.getElementById("review_name").value;
+textAdr = document.getElementById("review_address").value;
 count=0;
 reviewText=document.getElementById("review_review").value;
 keywordsList=reviewText.split(" ");
 resultKeyword="";
+textName=document.getElementById("review_name").value;
+textAdr = document.getElementById("review_address").value;
+
 for (i=0; i<keywordsList.length; i++) {
  if (keywordsList[i].length > 4)
    {resultKeyword+=keywordsList[i];
    count++;
- if (count === 3) { return resultKeyword; } else { resultKeyword+= (keywordsList[1].indexOf(",")>0) ? " ": ", ";}
+ if (count === 3) { return textName+" "+" "+textAdr+" "+resultKeyword; } else { resultKeyword+= (keywordsList[1].indexOf(",")>0) ? " ": ", ";}
 }
 }
 return initialText;
