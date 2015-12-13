@@ -1,6 +1,14 @@
 /*COMMON*/
 ul, ol {list-style: none; padding: 0;}
 
+html {
+    padding-bottom: 0;
+}
+
+body {
+	overflow-x: hidden;
+}
+
 /*HEADER*/
 header {
 	position: relative;
@@ -37,12 +45,15 @@ header {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-	color: #8E7D40;
+	color: #4E0922;
 	text-transform: uppercase;
 }
 
-.navbar-inverse .navbar-nav > li:hover a {
-	color: #F18500;
+.navbar-inverse .navbar-nav > li a:hover {
+	color: #FFE200;
+	background-color: transparent;
+	font-size: 18px;
+	transition: all 0.1s ease-in-out;
 }
 
 .intro-text .intro-lead-in {
@@ -80,12 +91,12 @@ header {
 #dowm:hover {
 	text-decoration: none;
 	border-color: #f6bf01;
-	background-color: #fec503;
+	background-color: #FFD64B;
 }
 
 /*CONTENT*/
 .content {
-	padding-top: 15px;
+	padding-top: 59px;
 }
 
 .c-main {
@@ -114,21 +125,25 @@ header {
 	display: inline-block;
 }
 
+.restaurant {
+	border-bottom: 1px solid #eeeeee;
+	padding: 15px 0;
+}
+
 .star {
-	width: 80px;
+	width: 105px;
 	height: 16px;
-	background: url(../img/star-off.png);
 	float: right;
 }
 
 .rating {
 	float: right;
 	margin-left: 25px;
+	width: 105px;
 }
 
-.restaurant {
-	border-bottom: 1px solid #eeeeee;
-	padding: 15px 0;
+.restaurant .rating {
+	margin-top: 18px;
 }
 
 .r-name {
@@ -141,8 +156,8 @@ header {
 	text-align: center;
 	background: #FDFDFD;
 	box-shadow: 0px 0px 4px 1px #dbdbdb;
-	margin-top: 1%;
 	background: transparent;
+	position: relative;
 }
 
 .footer span.copyright {
@@ -161,7 +176,7 @@ header {
 
 .txt-block {
 	position: absolute;
-	top: 21%;
+	top: 31%;
 	right: 0;
 	left: 0;
 	display: block;
@@ -176,6 +191,19 @@ header {
 
 /*MEDIA QUIRIES*/
 @media only screen and (max-width : 992px) {
+
+	body {
+		background-image: none;
+	}
+
+	.navbar-nav>li {
+		padding: 0;
+	}
+
+	.intro-text {
+		display: block;
+	}
+
 	.intro-text .intro-lead-in {
 		font-size: 30px;
 	}
@@ -186,43 +214,73 @@ header {
 }
 
 @media only screen and (max-width : 768px) {
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #fff;
+    }
+
+    .form-control {
+        margin-bottom: 10px;
+    }
+
+	.txt-block {
+		top: 25%;
+	}
+
 	.intro-text .intro-lead-in {
 		font-size: 23px;
 		margin-bottom: 0;
+		line-height: 20px;
 	}
 
 	.intro-text .intro-heading {
-		font-size: 48px;
-		margin-bottom: 28px;
+		font-size: 43px;
+		margin-bottom: 14px;
 	}
 
 	#dowm {
 		padding: 17px 32px;
+		font-size: 16px;
 	}
 }
 
 @media only screen and (max-width : 480px) {
+	h2 {
+		font-size: 25px;
+	}
+
 	.intro-text .intro-lead-in {
-		font-size: 15px;
-		line-height: 49px;
+		font-size: 14px;
+		line-height: 38px;
 	}
 
 	.intro-text .intro-heading {
-		font-size: 25px;
+		font-size: 20px;
 		line-height: 7px;
+		margin-bottom: 18px;
 	}
 
 	#dowm {
 		padding: 9px 20px;
-		font-size: 17px;
+		font-size: 10px;
 	}
 
-	.navbar.navbar-inverse.navbar-fixed-top {
-		min-height: 35px;
+	.navbar-inverse {
+		height: 44px;
 	}
 
 	button.navbar-toggle.collapsed {
 		margin-top: 3px;
 		margin-bottom: 3px;
 	}
+
+	#content {
+		padding-top: 30px;
+	}
+
+	.top-rest .rating {
+		margin-left: -108px;
+		padding-top: 32px !important;
+	}
 }
+

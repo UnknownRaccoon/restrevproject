@@ -12,6 +12,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w(application.css)
 Rails.application.config.assets.precompile += %w(mainpage.css)
 Rails.application.config.assets.precompile += %w(mainpage.js)
+Rails.application.config.assets.precompile += %w(mainPage.js)
 Rails.application.config.assets.precompile += %w(reviews.css)
 Rails.application.config.assets.precompile += %w(reviews.js)
 Rails.application.config.assets.precompile += %w(*.gif)
