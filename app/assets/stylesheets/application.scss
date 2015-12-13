@@ -347,6 +347,21 @@ header {
 	color: #ded522;
 }
 
+.nr-bg {
+	background-image: url(/assets/res-35b91c0f06739c4030bd1a680ed09432d0fb146dc627e68d7b5f854adf346a99.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 .review-form {
 	background: rgba(238, 238, 238, 0.71);
 	-webkit-box-shadow:inset 0px 0px 9px #000000;
