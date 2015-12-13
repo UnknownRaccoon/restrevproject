@@ -1,51 +1,51 @@
 <script type="text/javascript" src="http://vk.com/js/api/share.js?92" charset="windows-1251"></script>
 <div class="content">
-    <div class="reviews container-fluid">
-        <div class="restaurants container">
-            <div class="r-header">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3><%= @review.name %></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="restaurant">
-                <div class="row">
-                    <div class="img col-md-7">
-                        <%= link_to cl_image_tag(@review.photos.first.path, {size: '700x300', class: "img-responsive"}) , cl_image_path(@review.photos.first.path), :rel => "lightbox-review" if @review.photos.first != nil  %>
-                        <% if @review.photos.length > 1
-                            @review.photos.take(@review.photos.length - 1).each do |phot| %>
-                            <%= link_to cl_image_tag(phot.path, {size: '100x50', crop: :fit}) , cl_image_path(phot.path), :rel => "lightbox-review" %>
-                            <%end
-                        end%>
-                    </div>
-                    <div class="descr col-md-4 col-md-offset-1">
-                        <h4><%= @review.name %></h4>
-                        <h5>Адрес:  <%= @review.address %></h5>
-                        Кухня: <span class="<%= @review.id %>mark1">(<%= @review.mark1 %> из 5)</span><br />
-                        <h5>Интерьер: <span class="<%= @review.id %>mark2"></span>(<%= @review.mark2 %> из 5)</h5>
-                        <h5>Обслуживание: <span class="<%= @review.id %>mark3"></span>(<%= @review.mark3 %> из 5)</h5>
-                        <h5>Общая оценка: <span class="<%= @review.id %>avgrate"></span> (<%= @review.avgrate.round(1) %> из 5)</h5>
-                        Поделиться:
-                        <script type="text/javascript"><!--
-                            document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"http://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));
-                        --></script>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %> target="_blank"><img src="http://blog.bnv.com.ua/wp-content/themes/cell/images/fb.png"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="r-header">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-4">
-                <h3>Дата публикации: <%= @review.created_at.strftime("%-d, %B %Y") %></h3>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-                <h4><%= @review.review %></h4>
-            </div>
-        </div>
-    </div>
-    <script>rate( gon.restaurant, true) </script>
-    <!-- END REVIEWS -->
+	<div class="reviews container-fluid">
+		<div class="restaurants container">
+			<div class="r-header">
+				<div class="row">
+					<div class="col-md-12">
+						<h3><%= @review.name %></h3>
+					</div>
+				</div>
+			</div>
+			<div class="restaurant">
+				<div class="row">
+					<div class="img col-md-7">
+						<%= link_to cl_image_tag(@review.photos.first.path, {size: '700x300', class: "img-responsive"}) , cl_image_path(@review.photos.first.path), :rel => "lightbox-review" if @review.photos.first != nil  %>
+						<% if @review.photos.length > 1
+							@review.photos.take(@review.photos.length - 1).each do |phot| %>
+							<%= link_to cl_image_tag(phot.path, {size: '100x50', crop: :fit}) , cl_image_path(phot.path), :rel => "lightbox-review" %>
+							<%end
+						end%>
+					</div>
+					<div class="descr col-md-4 col-md-offset-1">
+						<h4><%= @review.name %></h4>
+						<h5>Адрес:  <%= @review.address %></h5>
+						Кухня: <span class="<%= @review.id %>mark1">(<%= @review.mark1 %> из 5)</span><br />
+						<h5>Интерьер: <span class="<%= @review.id %>mark2"></span>(<%= @review.mark2 %> из 5)</h5>
+						<h5>Обслуживание: <span class="<%= @review.id %>mark3"></span>(<%= @review.mark3 %> из 5)</h5>
+						<h5>Общая оценка: <span class="<%= @review.id %>avgrate"></span> (<%= @review.avgrate.round(1) %> из 5)</h5>
+						Поделиться:
+						<script type="text/javascript"><!--
+							document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"http://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));
+						--></script>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %> target="_blank><img src="http://blog.bnv.com.ua/wp-content/themes/cell/images/fb.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="r-header">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-4">
+				<h3>Дата публикации: <%= @review.created_at.strftime("%-d, %B %Y") %></h3>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<h4><%= @review.review %></h4>
+			</div>
+		</div>
+	</div>
+	<script>rate( gon.restaurant, true) </script>
+	<!-- END REVIEWS -->
 </div>

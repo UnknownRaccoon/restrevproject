@@ -15,15 +15,6 @@
 	display: none;
 }
 
-.footer {
-	padding: 25px 0;
-	text-align: center;
-	background: #FDFDFD;
-	box-shadow: 0px 0px 4px 1px #dbdbdb;
-	margin-top: 1%;
-	background: transparent;
-}
-
 .footer span.copyright {
 	text-transform: uppercase;
 	text-transform: none;
@@ -43,7 +34,7 @@ html {
 
 body {
 	overflow-x: hidden;
-	background: #eee;
+	background: #fff;
 }
 
 /*HEADER*/
@@ -149,12 +140,11 @@ header {
 
 .c-main {
 	background: #FDFDFD;
-	box-shadow: 0px 0px 4px 1px #dbdbdb;
 	padding: 0 10px;
 }
 
 .c-title {
-	border-bottom: 1px solid #eeeeee;
+	border-bottom: 1px solid #eee;
 	display: block;
 	text-align: center;
 	margin-bottom: 20px;
@@ -178,7 +168,7 @@ header {
 }
 
 .restaurant {
-	border-bottom: 1px solid #eeeeee;
+	border-bottom: 1px solid #eee;
 	padding: 15px 0;
 }
 
