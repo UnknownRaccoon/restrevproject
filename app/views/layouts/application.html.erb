@@ -10,6 +10,7 @@
 	<%= stylesheet_link_tag 'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
 	<%= Gon::Base.render_data %>
 	<%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag "mainPage" %>
 	<%= cloudinary_js_config %>
 	<%= csrf_meta_tags %>
 </head>
