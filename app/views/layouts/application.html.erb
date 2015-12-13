@@ -33,6 +33,7 @@
 							<li><%= link_to 'О нас', root_path + "#portfolioModal1", :class => "portfolio-link", "data-toggle" => "modal" %></li>
 							<li><%= link_to 'Контакты', root_path + "#portfolioModal2", :class => "portfolio-link", "data-toggle" => "modal" %></li>
 							<li><%= link_to 'Написать новую рецензию', new_review_path if admin_signed_in? %></li>
+							<li></li>
 						</ul>
 					<%= form_tag root_path, :method => 'get', :id => "reviews_search", :class => "navbar-form navbar-left", :role => "search" do %>
 						<div class="form-group">
