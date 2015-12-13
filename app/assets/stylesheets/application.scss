@@ -233,6 +233,10 @@ header {
 		padding: 0;
 	}
 
+	.nav>li>a {
+		padding: 10px 12px;
+	}
+
 	.intro-text .intro-lead-in {
 		font-size: 30px;
 	}
@@ -271,6 +275,11 @@ header {
 	}
 }
 
+@media only screen and (min-width : 768px) {
+	.navbar-form .form-control {
+		width: 172px;
+	}
+}
 @media only screen and (max-width : 480px) {
 	h2 {
 		font-size: 25px;
