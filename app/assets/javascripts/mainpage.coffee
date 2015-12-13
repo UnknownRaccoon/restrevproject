@@ -2,7 +2,7 @@ rev = JSON.parse gon.restaurants
 
 $(document).ready ->
     rate r for r in rev
-    $('a.page-scroll').bind 'click', (event) -> 
+    $('a.page-scroll').bind 'click', (event) ->
         $anchor = $ this
         $('html, body').stop().animate
             scrollTop: $($anchor.attr('href')).offset().top - 60
@@ -22,10 +22,8 @@ $(document).ready ->
     scrollY = ->
         return window.pageYOffset || document.documentElement.scrollTop
     init()
-
+initmap()
 google.maps.event.addDomListener window, 'load', ->
-    initmap()
-
     # Adding markers and labels for them
     markers = []
     infoW = new google.maps.InfoWindow

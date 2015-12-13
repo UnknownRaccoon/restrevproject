@@ -1,31 +1,3 @@
-
-$(document).ready ->
-    rate gon.restaurant, false
-    $('.attachinary-input').attachinary()
-
-
-google.maps.event.addDomListener window, 'load', ->
-    initmap()
-    marker = new google.maps.Marker
-        map: map
-        animation: google.maps.Animation.DROP
-        draggable: true
-        position:
-            lat: gon.restaurant.x || 30.7396057
-            lng: gon.restaurant.y || 30.7396057
-
-    # Saving coordinates to inputs by clicking the map or dragging the marker
-    google.maps.event.addListener map, 'click', (event) ->
-        marker.setPosition event.latLng
-        $('#lat').val event.latLng.lat()
-        $('#lng').val event.latLng.lng()
-        geocodeLatLng event.latLng
-
-    google.maps.event.addListener marker,'dragend', (event) ->
-        $('#lat').val event.latLng.lat()
-        $('#lng').val event.latLng.lng()
-        geocodeLatLng marker.getPosition
-
 geocodeLatLng = (pos) ->
     $.ajax('https://geocode-maps.yandex.ru/1.x/',
         data:
@@ -35,6 +7,53 @@ geocodeLatLng = (pos) ->
         dataType: 'json'
     ).done (result) ->
         $('input[name="review[address]"]').val result.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.AddressDetails.Country.AddressLine
+
+$(document).ready ->
+    rate gon.restaurant, false
+    $('.attachinary-input').attachinary()
+
+google.maps.event.addDomListener window, 'load', ->
+      options =
+          enableHighAccuracy: true
+          timeout: 5000
+          maximumAge: 0
+
+      succ = (pos) ->
+          crd= pos.coords
+          showmap crd.latitude, crd.longitude
+
+      er = (ps) ->
+        console.log("pos unavialeble")
+      if navigator.geolocation
+         navigator.geolocation.getCurrentPosition succ,er,options
+         map1 = succ
+      else
+         map1 = showmap 46.4711427, 30.7396057
+
+      showmap = (latl, lngl) ->
+             map = new google.maps.Map document.getElementById('map'),
+             center:
+                 lat: latl
+                 lng: lngl
+             zoom: 15
+             marker = new google.maps.Marker
+               map: map
+               animation: google.maps.Animation.DROP
+               draggable: true
+               position:
+                   lat: gon.restaurant.x || 30.7396057
+                   lng: gon.restaurant.y || 30.7396057
+          # Saving coordinates to inputs by clicking the map or dragging the marker
+             google.maps.event.addListener map, 'click', (event) ->
+               marker.setPosition event.latLng
+               $('#lat').val event.latLng.lat()
+               $('#lng').val event.latLng.lng()
+               geocodeLatLng event.latLng
+             google.maps.event.addListener marker,'dragend', (event) ->
+                $('#lat').val event.latLng.lat()
+                $('#lng').val event.latLng.lng()
+                geocodeLatLng marker.getPosition
+
 
 # For ukrainian streets google's geocoder sends ukrainian names only
 #geocodeLatLng = (position) ->

@@ -12,17 +12,26 @@
 #= require jquery.easing
 
 # The script loads the map and centers it to the user's position. If geolocation fails the map will focus on the center of Odessa
-window.initmap = ->
-  showmap = (latl, lngl) ->
+window.initmap = () ->
+ showmap = (latl, lngl) ->
         window.map = new google.maps.Map document.getElementById('map'),
         center:
-            lat: 46.4711427
-            lng: 30.7396057
+            lat: latl
+            lng: lngl
         zoom: 15
-    #if not (navigator.geolocation.getCurrentPosition (position) ->
-    #    showmap position.coords.latitude, position.coords.longitude
-    #, ->
-    #    showmap 46.4711427, 30.7396057)
+ options = 
+   enableHighAccuracy: true,
+   timeout: 5000,
+   maximumAge: 0
+
+ succ = (pos) ->
+     crd= pos.coords
+     showmap crd.latitude, crd.longitude
+ er = (ps) ->
+    console.log("pos unavialeble")
+ if navigator.geolocation
+    navigator.geolocation.getCurrentPosition succ,er,options
+ else
    showmap 46.4711427, 30.7396057
 
 # Displaying the ratings
