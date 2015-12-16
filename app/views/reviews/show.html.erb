@@ -42,10 +42,13 @@
 				<h3>Дата публикации: <%= @review.created_at.strftime("%-d, %B %Y") %></h3>
 			</div>
 			<div class="col-md-8 col-md-offset-2">
+        	<div id="map"></div>
 				<h4><%= @review.review %></h4>
 			</div>
 		</div>
 	</div>
-	<script>rate( gon.restaurant, true) </script>
+	<script>
+  rate(gon.restaurant, true);
+  </script>
 	<!-- END REVIEWS -->
 </div>

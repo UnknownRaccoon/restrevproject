@@ -17,19 +17,27 @@ google.maps.event.addDomListener window, 'load', ->
           enableHighAccuracy: true
           timeout: 5000
           maximumAge: 0
-
+      rew = (tt) ->
+        showmap gon.restaurant.x, gon.restaurant.y
       succ = (pos) ->
           crd= pos.coords
-          showmap crd.latitude, crd.longitude
+          ur=window.location.pathname;
+          if  ur.indexOf("new") > 0 or ur.indexOf("edit") >0
+             showmap crd.latitude, crd.longitude
+          else
+             rew("new")
 
       er = (ps) ->
         console.log("pos unavialeble")
-      if navigator.geolocation
-         navigator.geolocation.getCurrentPosition succ,er,options
-      else
-         showmap 46.4711427, 30.7396057
+        ur=window.location.pathname;
+        if  ur.indexOf("new") > 0 or ur.indexOf("edit") >0
+           showmap 46.4711427, 30.7396057
+        else
+           rew("new")
 
-      showmap = (latl, lngl) ->
+      if navigator.geolocation
+              navigator.geolocation.getCurrentPosition succ,er,options
+     showmap = (latl, lngl) ->
              map = new google.maps.Map document.getElementById('map'),
              center:
                  lat: latl

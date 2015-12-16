@@ -20,7 +20,7 @@
   });
 
   google.maps.event.addDomListener(window, 'load', function() {
-    var er, options, showmap, succ;
+    var er, options, showmap, succ, ur;
     options = {
       enableHighAccuracy: true,
       timeout: 5000,
@@ -34,6 +34,7 @@
     er = function(ps) {
       return console.log("pos unavialeble");
     };
+    ur = window.location.pathname;
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(succ, er, options);
     } else {
