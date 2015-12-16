@@ -100,12 +100,6 @@ header {
 	border: none;
 }
 
-.intro-text {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
 .intro-text .intro-lead-in {
 	margin-bottom: 25px;
 	font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -327,7 +321,10 @@ header {
 	text-align: center;
 	margin: 132px auto 0;
 	background: rgba(238, 238, 238, 0.71);
-	position: relative;
+	position: absolute;
+	top: 90px;
+	left: 0;
+	right: 0;
 }
 
 .checkbox label {
