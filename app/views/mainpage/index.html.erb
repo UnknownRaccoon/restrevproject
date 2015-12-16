@@ -81,12 +81,16 @@
 										<td>Общая оценка:</td><td class="rating"><span class="<%= rest.id %>avgrate"></span><br /><%= rest.avgrate.round(1) %> из 5.0</td>
 									</tr>
 								</table>
-							</div>
+              </div>
 						</div>
 					</div>
 				</div><!-- END RESTAURANT -->
 				<% end %>
-			</div><!-- END RESTAURANTS -->
+      </div><!-- END RESTAURANTS -->
 		</div><!-- END REVIEWS -->
 	</div><!-- END C-MAIN -->
 </div><!-- END CONTENT -->
+<% @restaurants_pg.each do |rest_pg| %>
+<h2><% rest_pg.name %></h2>
+<% end %>
+<% paginate @restaurants_pg %>

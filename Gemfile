@@ -5,6 +5,12 @@ gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Search in pg
+gem 'pg_search'
+
+#Pagination
+gem 'kaminari'
+
 # Localization support
 gem 'rails-i18n'
 
@@ -20,7 +26,7 @@ gem 'gon'
 # for debugger
 gem 'pry'
 
-# Required by Haroku
+# Required by Heroku
 gem 'rails_12factor'
 
 # Bootstrap support
