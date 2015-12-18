@@ -146,9 +146,15 @@ header {
 	width: 100%;
 }
 
+.restaurant p {
+	text-align: justify;
+}
+
 .restaurant .adress {
-	display: block;
-	text-align: right;
+	display: inline-block;
+	text-align: left;
+	width: 232px;
+	float: right;
 }
 
 .restaurant .info {
