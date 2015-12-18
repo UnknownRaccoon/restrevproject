@@ -78,6 +78,16 @@ header {
 	background: rgba(0, 0, 0, 0.8);
 }
 
+.navbar-brand {
+	width: 40px;
+	padding: 4px 0;
+	margin-left: 9px;
+}
+
+.navbar-brand > img {
+	width: 100%;
+}
+
 .navbar-inverse.fixed .navbar-nav > li > a {
 	color: #FFE200;
 }
