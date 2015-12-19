@@ -2,9 +2,13 @@
 	float: right;
 }
 
+.categ {
+	font-size: 17px;
+}
+
 .cat-title {
 	display: inline-block;
-	width: 102px;
+	width: 120px;
 	float: left;
 	margin-right: 9%;
 }
@@ -15,6 +19,17 @@
 
 .total-sum {
 	margin: 20px 0;
+}
+
+.rrd-date {
+	font-size: 19px;
+	font-style: italic;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+.rrd-txt {
+	font-size: 17px;
 }
 
 
