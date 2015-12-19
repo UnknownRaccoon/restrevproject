@@ -1,9 +1,6 @@
 body {
 	background: #fff;
-}
-
-.res-review {
-	padding-bottom: 20px;
+	padding-bottom: 55px;
 }
 
 .rcc-info {
@@ -54,12 +51,6 @@ body {
 @media only screen and (max-width : 768px) {
 	#map {
 		margin: 20px 0;
-	}
-}
-
-@media only screen and (max-width : 575px) {
-	.res-review {
-		padding-bottom: 120px;
 	}
 }
 
