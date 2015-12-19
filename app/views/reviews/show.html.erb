@@ -22,22 +22,40 @@
 			</div>
 			<div class="row">
 				<div class="rcc-info col-xs-12 col-sm-6 clearfix">
-					<div class="row">
-						<div class="col-xs-6 categ">
-							<p>Адрес:</p>
-							<p>Кухня:</p>
-							<p>Интерьер:</p>
-							<p>Обслуживание:</p>
-							<p class="total-sum">Общая оценка:</p>
-							<p>Поделиться:</p>
+					<div class="categ">
+						<div class="cat clearfix">
+							<p class="cat-title">Адрес:</p>
+							<div class="cat-info">
+								<%= @review.address %>
+							</div>
 						</div>
-						<div class="col-xs-6 categ-info">
-							<div class="star"><%= @review.address %></div>
-							<div class="star"><span class="<%= @review.id %>mark1"></span>(<%= @review.mark1 %> из 5)</div>
-							<div class="star"><span class="<%= @review.id %>mark2"></span>(<%= @review.mark2 %> из 5)</div>
-							<div class="star"><span class="<%= @review.id %>mark3"></span>(<%= @review.mark3 %> из 5)</div>
-							<div class="star total-sum"><span class="<%= @review.id %>avgrate"></span> (<%= @review.avgrate.round(1) %> из 5)</div>
-							<div class="share">
+						<div class="cat clearfix">
+							<p class="cat-title">Кухня:</p>
+							<div class="cat-info">
+								<span class="<%= @review.id %>mark1"></span>(<%= @review.mark1 %> из 5)
+							</div>
+						</div>
+						<div class="cat clearfix">
+							<p class="cat-title">Интерьер:</p>
+							<div class="cat-info">
+								<span class="<%= @review.id %>mark2"></span>(<%= @review.mark2 %> из 5)
+							</div>
+						</div>
+						<div class="cat clearfix">
+							<p class="cat-title">Обслуживание:</p>
+							<div class="cat-info">
+								<span class="<%= @review.id %>mark3"></span>(<%= @review.mark3 %> из 5)
+							</div>
+						</div>
+						<div class="cat clearfix total-sum">
+							<p class="cat-title">Общая оценка:</p>
+							<div class="cat-info">
+								<span class="<%= @review.id %>avgrate"></span>(<%= @review.avgrate.round(1) %> из 5)
+							</div>
+						</div>
+						<div class="cat clearfix share">
+							<p class="cat-title">Поделиться:</p>
+							<div class="cat-info">
 								<script type="text/javascript">
 								document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"http://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));
 								</script>
