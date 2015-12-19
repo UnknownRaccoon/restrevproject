@@ -1,7 +1,6 @@
 // ============= restaurant review text visibility fix ====================
 
 $(document).ready(function() {
-	var h = $(window).height();
 	var wid = $(window).width();
 	if (wid <= 575) {
 		$('.res-review').css('padding-bottom', '120px');
@@ -11,6 +10,7 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function(){
+	var wid = $(window).width();
 	if (wid <= 575) {
 		$('.res-review').css('padding-bottom', '120px');
 	} else {
