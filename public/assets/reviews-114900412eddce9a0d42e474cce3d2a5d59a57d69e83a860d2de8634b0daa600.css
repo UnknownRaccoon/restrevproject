@@ -1,0 +1,40 @@
+/* line 1, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+body {
+  padding-top: 70px !important;
+}
+
+/* line 5, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.new-block {
+  margin: 50px 0;
+}
+
+/* line 9, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.rcc-info {
+  float: right;
+}
+
+/* line 13, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.total-sum {
+  margin: 20px 0;
+}
+
+/***********************MEDIA QUERIES********************/
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /* line 24, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+  #map {
+    margin: 20px 0;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /* line 31, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+  #map {
+    display: none;
+  }
+
+  /* line 35, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+  .rcc-info {
+    float: none;
+  }
+}
