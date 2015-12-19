@@ -52,6 +52,12 @@ body {
 	}
 }
 
+@media only screen and (max-width : 575px) {
+	.res-review {
+		padding-bottom: 120px;
+	}
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	.rcc-info {
