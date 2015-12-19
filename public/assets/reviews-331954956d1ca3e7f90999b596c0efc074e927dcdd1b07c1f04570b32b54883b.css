@@ -1,0 +1,78 @@
+/* line 1, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+body {
+  background: #fff;
+}
+
+/* line 5, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.res-review {
+  padding-bottom: 20px;
+}
+
+/* line 9, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.rcc-info {
+  float: right;
+}
+
+/* line 13, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.rr-descr,
+.rcc-info {
+  margin-top: 20px;
+}
+
+/* line 18, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.categ {
+  font-size: 17px;
+}
+
+/* line 22, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.cat-title {
+  display: inline-block;
+  width: 120px;
+  float: left;
+  margin-right: 9%;
+}
+
+/* line 29, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.cat-info {
+  display: inline-block;
+}
+
+/* line 33, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.total-sum {
+  margin: 20px 0;
+}
+
+/* line 37, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.rrd-date {
+  font-size: 19px;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+/* line 44, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+.rrd-txt {
+  font-size: 17px;
+}
+
+/***********************MEDIA QUERIES********************/
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /* line 55, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+  #map {
+    margin: 20px 0;
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* line 61, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+  .res-review {
+    padding-bottom: 120px;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /* line 68, /root/DataArtProject/app/assets/stylesheets/reviews.scss */
+  .rcc-info {
+    float: none;
+  }
+}
