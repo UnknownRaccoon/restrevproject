@@ -1,3 +1,38 @@
 body {
-    padding-top: 70px !important
+	padding-top: 70px !important
+}
+
+.new-block {
+	margin: 50px 0;
+}
+
+.rcc-info {
+	float: right;
+}
+
+.total-sum {
+	margin: 20px 0;
+}
+
+
+
+
+/***********************MEDIA QUERIES********************/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	#map {
+		margin: 20px 0;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	#map {
+		display: none;
+	}
+
+	.rcc-info {
+		float: none;
+	}
 }
