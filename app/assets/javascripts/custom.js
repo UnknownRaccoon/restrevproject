@@ -6,7 +6,7 @@ $(document).ready(function() {
 	if (wid <= 575) {
 		$('.res-review').css('padding-bottom', '120px');
 	} else {
-		$('.res-review').css('padding-bottom', '20px');
+		$('.res-review').css('padding-bottom', '120px');
 	}
 });
 
@@ -14,6 +14,6 @@ $(window).scroll(function(){
 	if (wid <= 575) {
 		$('.res-review').css('padding-bottom', '120px');
 	} else {
-		$('.res-review').css('padding-bottom', '20px');
+		$('.res-review').css('padding-bottom', '120px');
 	}
 });
