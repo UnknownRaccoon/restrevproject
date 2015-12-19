@@ -38,8 +38,8 @@
 							<div class="star"><span class="<%= @review.id %>mark3"></span>(<%= @review.mark3 %> из 5)</div>
 							<div class="star total-sum"><span class="<%= @review.id %>avgrate"></span> (<%= @review.avgrate.round(1) %> из 5)</div>
 							<div class="share">
-								<script type="text/javascript"><!--
-								document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"http://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));-->
+								<script type="text/javascript">
+								document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"http://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));
 								</script>
 								<a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %> target="_blank>
 									<img src="http://blog.bnv.com.ua/wp-content/themes/cell/images/fb.png">
