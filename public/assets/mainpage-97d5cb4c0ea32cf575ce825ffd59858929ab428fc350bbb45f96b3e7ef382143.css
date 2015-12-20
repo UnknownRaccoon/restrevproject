@@ -1,0 +1,384 @@
+/*COMMON*/
+/* line 3, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 5, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+html {
+  padding-bottom: 0;
+}
+
+/* line 9, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+body {
+  overflow-x: hidden;
+}
+
+/*HEADER*/
+/* line 14, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+header {
+  position: relative;
+  z-index: 5;
+}
+
+/* line 19, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.navbar-nav > li {
+  padding: 0 25px;
+}
+
+/* line 23, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.navbar-form {
+  border-color: #101010;
+  text-align: right;
+  float: none !important;
+}
+
+/* line 29, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.navbar-inverse {
+  border: none;
+  background: rgba(250, 250, 250, 0.5) none repeat scroll 0% 0%;
+  position: fixed;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 41, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.fixed {
+  -webkit-box-shadow: 4px 0 30px 5px black;
+  -moz-box-shadow: 4px 0 30px 5px black;
+  box-shadow: 4px 0 30px 5px black;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 48, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: #4E0922;
+  text-transform: uppercase;
+}
+
+/* line 53, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.navbar-inverse .navbar-nav > li a:hover {
+  color: #FFE200;
+  font-size: 18px;
+  transition: all 0.1s ease-in-out;
+}
+
+/* line 59, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.intro-text .intro-lead-in {
+  margin-bottom: 25px;
+  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  line-height: 40px;
+  color: #ded522;
+}
+
+/* line 68, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.intro-text .intro-heading {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 75px;
+  color: #ded522;
+}
+
+/* line 78, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+#dowm {
+  padding: 20px 40px;
+  border-color: #FFCC00;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #FFCC00;
+  text-decoration: none;
+}
+
+/* line 91, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+#dowm:hover {
+  text-decoration: none;
+  border-color: #f6bf01;
+  background-color: #FFD64B;
+}
+
+/*CONTENT*/
+/* line 98, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.content {
+  padding-top: 59px;
+}
+
+/* line 102, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.c-main {
+  background: #fff;
+  padding: 0 10px;
+}
+
+/* line 107, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.c-title {
+  border-bottom: 1px solid #eee;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 114, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.top-rest ul {
+  list-style: none;
+}
+
+/* line 118, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.top-rest li {
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
+
+/* line 123, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.top-rest div {
+  display: inline-block;
+}
+
+/* line 127, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.top10 .table > tbody > tr:hover {
+  background: #eee;
+}
+
+/* line 131, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+td.rest-name {
+  padding: 0 !important;
+}
+
+/* line 135, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+td.rest-name a {
+  display: block;
+  height: 39px;
+  line-height: 39px;
+}
+
+/* line 141, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.restaurant {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  margin-bottom: 5px;
+  -webkit-transition: all .05s ease-in-out;
+  -moz-transition: all .05s ease-in-out;
+  -ms-transition: all .05s ease-in-out;
+  -o-transition: all .05s ease-in-out;
+  transition: all .05s ease-in-out;
+}
+
+/* line 152, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.restaurant:hover {
+  background: #eee;
+}
+
+/* line 156, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.restaurant .img-responsive {
+  display: block;
+  max-width: 360px;
+  height: 250px;
+  width: 100%;
+}
+
+/* line 163, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.restaurant p {
+  text-align: justify;
+}
+
+/* line 167, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.restaurant .adress {
+  display: inline-block;
+  text-align: left;
+  width: 232px;
+  float: right;
+}
+
+/* line 174, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.restaurant .info {
+  display: inline-block;
+  float: right;
+}
+
+/* line 179, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.star {
+  width: 105px;
+  height: 16px;
+  float: right;
+}
+
+/* line 185, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.rating {
+  float: right;
+  margin-left: 25px;
+  width: 105px;
+}
+
+/* line 191, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.restaurant .rating {
+  margin-top: 18px;
+}
+
+/* line 195, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.r-name {
+  margin-top: 0;
+}
+
+/*FOOTER*/
+/* line 200, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.footer {
+  padding: 25px 0;
+  text-align: center;
+  background: #eee;
+  box-shadow: 0px 0px 4px 1px #dbdbdb;
+  position: relative;
+}
+
+/* line 208, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.footer span.copyright {
+  text-transform: uppercase;
+  text-transform: none;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 40px;
+}
+
+/*VIDEO*/
+/* line 217, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.intro-text {
+  position: relative;
+  text-align: center;
+}
+
+/* line 222, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.txt-block {
+  position: absolute;
+  top: 31%;
+  right: 0;
+  left: 0;
+  display: block;
+}
+
+/* line 230, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+.bgvideo {
+  position: relative;
+  margin-top: -20px;
+  width: 100%;
+  z-index: -9999;
+}
+
+/*MEDIA QUIRIES*/
+@media only screen and (max-width: 992px) {
+  /* line 240, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  body {
+    background-image: none;
+  }
+
+  /* line 244, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .navbar-nav > li {
+    padding: 0;
+  }
+
+  /* line 248, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .intro-text {
+    display: block;
+  }
+
+  /* line 252, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .intro-text .intro-lead-in {
+    font-size: 30px;
+  }
+
+  /* line 256, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .intro-text .intro-heading {
+    font-size: 62px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 263, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+  }
+
+  /* line 267, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .form-control {
+    margin-bottom: 10px;
+  }
+
+  /* line 271, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .txt-block {
+    top: 25%;
+  }
+
+  /* line 275, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .intro-text .intro-lead-in {
+    font-size: 23px;
+    margin-bottom: 0;
+    line-height: 20px;
+  }
+
+  /* line 281, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .intro-text .intro-heading {
+    font-size: 43px;
+    margin-bottom: 14px;
+  }
+
+  /* line 286, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  #dowm {
+    padding: 17px 32px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 293, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  h2 {
+    font-size: 25px;
+  }
+
+  /* line 297, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .intro-text .intro-lead-in {
+    font-size: 14px;
+    line-height: 38px;
+  }
+
+  /* line 302, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .intro-text .intro-heading {
+    font-size: 20px;
+    line-height: 7px;
+    margin-bottom: 18px;
+  }
+
+  /* line 308, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  #dowm {
+    padding: 9px 20px;
+    font-size: 10px;
+  }
+
+  /* line 313, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .navbar-inverse {
+    height: 44px;
+  }
+
+  /* line 317, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  button.navbar-toggle.collapsed {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  /* line 322, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  #content {
+    padding-top: 30px;
+  }
+
+  /* line 326, /root/DataArtProject/app/assets/stylesheets/mainpage.scss */
+  .top-rest .rating {
+    margin-left: -108px;
+    padding-top: 32px !important;
+  }
+}
