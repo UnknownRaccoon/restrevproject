@@ -17,25 +17,25 @@
 			<div class="nr-inp col-xs-12 col-sm-12 col-md-5 col-lg-5">
 			<div class="form-group">
 				<div class="field">
-				<%= f.label :address %><br />
+				<%= f.label :address %>*<br />
 				<%= f.text_field :address, :class => "form-control" %><br />
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="field">
-				<%= f.label :name %><br />
+				<%= f.label :name %>*<br />
 				<%= f.text_field :name, :class => "form-control" %><br />
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="field">
-				<%= f.label :review %><br />
+				<%= f.label :review %>*<br />
 				<%= f.text_area :review, :class => "form-control" %><br />
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="field">
-				<%= f.label :comment %><br />
+				<%= f.label :comment %>*<br />
 				<%= f.text_field :comment, :class => "form-control" %><br />
 				</div>
 			</div>
@@ -48,9 +48,9 @@
       </div>
  			<div class="form-group">
 				<div class="field">
-				<%= f.label :mark1 %>: <span class="mark1"></span><br />
-				<%= f.label :mark2 %>: <span class="mark2"></span><br />
-				<%= f.label :mark3 %>: <span class="mark3"></span><br />
+				<%= f.label :mark1 %>*: <span class="mark1"></span><br />
+				<%= f.label :mark2 %>*: <span class="mark2"></span><br />
+				<%= f.label :mark3 %>*: <span class="mark3"></span><br />
 				</div>
 			</div>
 				<%= f.hidden_field :x, :id=> "lat" %>
