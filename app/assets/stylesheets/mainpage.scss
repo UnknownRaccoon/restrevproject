@@ -123,6 +123,20 @@ header {
 	display: inline-block;
 }
 
+.top10 .table > tbody > tr:hover {
+	background: #eee;
+}
+
+td.rest-name {
+	padding: 0 !important;
+}
+
+td.rest-name a {
+	display: block;
+	height: 39px;
+	line-height: 39px;
+}
+
 .restaurant {
 	border-bottom: 1px solid #eee;
 	padding: 15px 0;
