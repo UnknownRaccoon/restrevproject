@@ -33,7 +33,7 @@
 							<li><%= link_to 'Главная', root_path + "#content" %></li>
 							<li><%= link_to 'О нас', "#portfolioModal1", :class => "portfolio-link", "data-toggle" => "modal" %></li>
 							<li><%= link_to 'Контакты',"#portfolioModal2", :class => "portfolio-link", "data-toggle" => "modal" %></li>
-							<li><%= link_to 'Написать новую рецензию', new_review_path if admin_signed_in? %></li>
+							<li><%= link_to 'Новая рецензия', new_review_path if admin_signed_in? %></li>
              <li><%= link_to 'Выйти', destroy_admin_session_path, :method => :delete if admin_signed_in? %></li>
             </ul>
 					<%= form_tag root_path, :method => 'get', :id => "reviews_search", :class => "navbar-form navbar-left", :role => "search" do %>
