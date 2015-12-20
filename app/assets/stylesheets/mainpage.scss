@@ -123,6 +123,14 @@ header {
 	display: inline-block;
 }
 
+.top10 .table > tbody > tr {
+	-webkit-transition: all .13s ease-in-out;
+		 -moz-transition: all .13s ease-in-out;
+			-ms-transition: all .13s ease-in-out;
+			 -o-transition: all .13s ease-in-out;
+					transition: all .13s ease-in-out;
+}
+
 .top10 .table > tbody > tr:hover {
 	background: #eee;
 }
@@ -141,11 +149,11 @@ td.rest-name a {
 	border-bottom: 1px solid #eee;
 	padding: 15px 0;
 	margin-bottom: 5px;
-	-webkit-transition: all .05s ease-in-out;
-		 -moz-transition: all .05s ease-in-out;
-			-ms-transition: all .05s ease-in-out;
-			 -o-transition: all .05s ease-in-out;
-					transition: all .05s ease-in-out;
+	-webkit-transition: all .13s ease-in-out;
+		 -moz-transition: all .13s ease-in-out;
+			-ms-transition: all .13s ease-in-out;
+			 -o-transition: all .13s ease-in-out;
+					transition: all .13s ease-in-out;
 }
 
 .restaurant:hover {
