@@ -340,6 +340,14 @@ header {
 	padding-left: 0;
 }
 
+.field > label {
+	font-size: 17px;
+}
+
+.field > label:after {
+	content: "*";
+}
+
 #error_explanation {
 	background: rgba(238, 238, 238, 0.71);
 	-webkit-box-shadow: inset 0px 0px 9px red;
