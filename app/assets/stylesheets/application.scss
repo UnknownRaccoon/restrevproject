@@ -344,8 +344,14 @@ header {
 	font-size: 17px;
 }
 
-.field > label:after {
+#new_review .field > label:after {
 	content: "*";
+}
+
+#keywords {
+	margin-top: -16px;
+	padding-left: 12px;
+	font-size: 15px;
 }
 
 #error_explanation {
