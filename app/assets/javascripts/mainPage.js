@@ -16,10 +16,10 @@ $(document).ready(function() {
 
 //***************** SLIDE EFFECT ********************
 	if (w > 480) {
-		$('#content').hide();
+		$('#content .c-main').hide();
 		$(window).scroll(function(){
-			if ( $(this).scrollTop() >= 150 ) {
-				$('#content').slideDown();
+			if ( $(this).scrollTop() >= 60 {
+				$('#content .c-main').slideDown();
 			}
 		});
 	};
