@@ -18,7 +18,7 @@ $(document).ready(function() {
 	if (w > 480) {
 		$('#content .c-main').hide();
 		$(window).scroll(function(){
-			if ( $(this).scrollTop() >= 60 {
+			if ( $(this).scrollTop() >= 60) {
 				$('#content .c-main').slideDown();
 			}
 		});
