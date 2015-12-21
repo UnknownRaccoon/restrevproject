@@ -77,6 +77,7 @@ header {
 }
 
 #dowm {
+	display: inline-block;
 	padding: 20px 40px;
 	border-color: #FFCC00;
 	border-radius: 3px;
@@ -290,21 +291,6 @@ td.rest-name a {
 		margin-bottom: 10px;
 	}
 
-	.txt-block {
-		top: 25%;
-	}
-
-	.intro-text .intro-lead-in {
-		font-size: 23px;
-		margin-bottom: 0;
-		line-height: 20px;
-	}
-
-	.intro-text .intro-heading {
-		font-size: 43px;
-		margin-bottom: 14px;
-	}
-
 	#dowm {
 		padding: 17px 32px;
 		font-size: 16px;
@@ -317,19 +303,14 @@ td.rest-name a {
 	}
 
 	.intro-text .intro-lead-in {
-		font-size: 14px;
-		line-height: 38px;
+		font-size: 23px;
+		margin-bottom: 0;
+		line-height: 20px;
 	}
 
 	.intro-text .intro-heading {
-		font-size: 20px;
-		line-height: 7px;
-		margin-bottom: 18px;
-	}
-
-	#dowm {
-		padding: 9px 20px;
-		font-size: 10px;
+		font-size: 43px;
+		margin-bottom: 14px;
 	}
 
 	.navbar-inverse {
