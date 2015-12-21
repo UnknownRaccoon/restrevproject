@@ -93,6 +93,18 @@ header {
 	background-color: #FFD64B;
 }
 
+#mp-bg {
+	background-image: url(/assets/res-35b91c0f06739c4030bd1a680ed09432d0fb146dc627e68d7b5f854adf346a99.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: none;
+	width: 100%;
+}
+
 /*CONTENT*/
 .content {
 	padding-top: 59px;
