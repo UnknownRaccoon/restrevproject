@@ -33,6 +33,9 @@ $(document).ready(function() {
 	if (w < 900) {
 		$('#bgvideo').hide();
 		$('#mp-bg').show();
+		$('#mp-bg').height(h);
+		$('.intro-text .intro-lead-in').css('background', 'rgba(0,0,0,0.5)');
+		$('.intro-text .intro-heading').css('background', 'rgba(0,0,0,0.4)');
 	}
 //***************** END SET HEADER BG ********************
 
@@ -50,6 +53,8 @@ $(window).resize(function() {
 		$('#bgvideo').hide();
 		$('#mp-bg').show();
 		$('#mp-bg').height(h);
+		$('.intro-text .intro-lead-in').css('background', 'rgba(0,0,0,0.5)');
+		$('.intro-text .intro-heading').css('background', 'rgba(0,0,0,0.4)');
 	} else {
 		$('#bgvideo').show();
 		$('#mp-bg').hide();
