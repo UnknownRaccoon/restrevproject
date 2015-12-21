@@ -13,6 +13,20 @@ $(document).ready(function() {
 	});
 //******************** END TOP NAV ********************
 
+
+//***************** SLIDE EFFECT ********************
+	if (w > 480) {
+		$('#content').hide();
+		$(window).scroll(function(){
+			if ( ($(this).scrollTop()+h) >= 150 ) {
+				$('#content').slideDown();
+			}
+		});
+	};
+
+//***************** END SLIDE EFFECT ********************
+
+
 //***************** CENTER BUTTON ********************
 
 	$("#dowm").click(function (event) {
