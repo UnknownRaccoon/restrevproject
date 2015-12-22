@@ -1,3 +1,58 @@
 body {
-    padding-top: 70px !important
+	background: #fff;
+	padding-bottom: 55px;
+}
+
+.rcc-info {
+	float: right;
+}
+
+.rr-descr,
+.rcc-info {
+	margin-top: 20px;
+}
+
+.categ {
+	font-size: 17px;
+}
+
+.cat-title {
+	display: inline-block;
+	width: 120px;
+	float: left;
+	margin-right: 9%;
+}
+
+.total-sum {
+	margin: 20px 0;
+}
+
+.rrd-date {
+	font-size: 19px;
+	font-style: italic;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+.rrd-txt {
+	font-size: 17px;
+}
+
+
+
+
+/***********************MEDIA QUERIES********************/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	#map {
+		margin: 20px 0;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.rcc-info {
+		float: none;
+	}
 }

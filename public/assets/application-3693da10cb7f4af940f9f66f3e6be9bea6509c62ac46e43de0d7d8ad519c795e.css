@@ -8878,6 +8878,8 @@ button.close {
 #map {
   height: 400px;
   background-color: #CCC;
+  max-width: 1031px;
+  margin-bottom: 20px;
 }
 
 /* line 10, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
@@ -8946,15 +8948,19 @@ header {
   width: 100%;
   z-index: 5;
   -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+     -moz-transition: all .5s ease-in-out;
+      -ms-transition: all .5s ease-in-out;
+       -o-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
 }
 
 /* line 68, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
 .fixed {
-  -webkit-box-shadow: 4px 0 30px 5px black;
-  -moz-box-shadow: 4px 0 30px 5px black;
-  box-shadow: 4px 0 30px 5px black;
+  -webkit-box-shadow: 4px 0 30px 5px rgba(0,0,0,1.0);
+     -moz-box-shadow: 4px 0 30px 5px rgba(0,0,0,1.0);
+      -ms-box-shadow: 4px 0 30px 5px rgba(0,0,0,1.0);
+       -o-box-shadow: 4px 0 30px 5px rgba(0,0,0,1.0);
+          box-shadow: 4px 0 30px 5px rgba(0,0,0,1.0);
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -8970,12 +8976,17 @@ header {
 }
 
 /* line 84, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
-.navbar-inverse .navbar-nav > li a:hover,
-.navbar-inverse .navbar-nav > li a:focus {
+.navbar-inverse .navbar-nav > li a:hover
+/*.navbar-inverse .navbar-nav > li a:focus */{
   color: #FFE200;
   background-color: transparent;
   font-size: 18px;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+     -moz-transition: all .1s ease-in-out;
+      -ms-transition: all .1s ease-in-out;
+       -o-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
+  border: none;
 }
 
 /* line 92, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
@@ -9035,7 +9046,7 @@ header {
 
 /* line 141, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
 .c-main {
-  background: #FDFDFD;
+  background: #fff;
   padding: 0 10px;
 }
 
@@ -9044,11 +9055,6 @@ header {
   border-bottom: 1px solid #eee;
   display: block;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-/* line 153, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
-#map {
   margin-bottom: 20px;
 }
 
@@ -9066,12 +9072,6 @@ header {
 /* line 166, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
 .top-rest div {
   display: inline-block;
-}
-
-/* line 170, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
-.restaurant {
-  border-bottom: 1px solid #eee;
-  padding: 15px 0;
 }
 
 /* line 175, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
@@ -9104,7 +9104,6 @@ header {
 .footer {
   padding: 25px 0;
   text-align: center;
-  background: #FDFDFD;
   box-shadow: 0px 0px 4px 1px #dbdbdb;
   background: #eee;
   position: absolute;
@@ -9130,6 +9129,12 @@ header {
 }
 
 /*MEDIA QUIRIES*/
+@media only screen and (min-width : 1200px) {
+  .container {
+    width: 82%;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   /* line 226, /home/sergey/Documents/restrevproject/app/assets/stylesheets/application.scss */
   .navbar-nav > li {

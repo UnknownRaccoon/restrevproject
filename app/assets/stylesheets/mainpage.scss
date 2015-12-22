@@ -2,7 +2,7 @@
 ul, ol {list-style: none; padding: 0;}
 
 html {
-    padding-bottom: 0;
+	padding-bottom: 0;
 }
 
 body {
@@ -51,7 +51,6 @@ header {
 
 .navbar-inverse .navbar-nav > li a:hover {
 	color: #FFE200;
-	background-color: transparent;
 	font-size: 18px;
 	transition: all 0.1s ease-in-out;
 }
@@ -62,7 +61,8 @@ header {
 	font-size: 40px;
 	font-style: italic;
 	line-height: 40px;
-	color: rgb(222, 213, 34);
+	color: #FFD600;
+	text-shadow: 0 1px 3px rgba(0,0,0,1);
 }
 
 .intro-text .intro-heading {
@@ -72,10 +72,12 @@ header {
 	font-size: 75px;
 	font-weight: 700;
 	line-height: 75px;
-	color: rgb(222, 213, 34);
+	color: #FFD600;
+	text-shadow: 0 1px 3px rgba(0,0,0,1);
 }
 
 #dowm {
+	display: inline-block;
 	padding: 20px 40px;
 	border-color: #FFCC00;
 	border-radius: 3px;
@@ -94,13 +96,25 @@ header {
 	background-color: #FFD64B;
 }
 
+#mp-bg {
+	background-image: url(/assets/res-35b91c0f06739c4030bd1a680ed09432d0fb146dc627e68d7b5f854adf346a99.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: none;
+	width: 100%;
+}
+
 /*CONTENT*/
 .content {
 	padding-top: 59px;
 }
 
 .c-main {
-	background: #FDFDFD;
+	background: #fff;
 	padding: 0 10px;
 }
 
@@ -124,9 +138,65 @@ header {
 	display: inline-block;
 }
 
+.top10 .table > tbody > tr {
+	-webkit-transition: all .13s ease-in-out;
+		 -moz-transition: all .13s ease-in-out;
+			-ms-transition: all .13s ease-in-out;
+			 -o-transition: all .13s ease-in-out;
+					transition: all .13s ease-in-out;
+}
+
+.top10 .table > tbody > tr:hover {
+	background: #eee;
+}
+
+td.rest-name {
+	padding: 0 !important;
+}
+
+td.rest-name a {
+	display: block;
+	min-height: 39px;
+	line-height: 39px;
+}
+
 .restaurant {
 	border-bottom: 1px solid #eee;
 	padding: 15px 0;
+	margin-bottom: 5px;
+	-webkit-transition: all .13s ease-in-out;
+		 -moz-transition: all .13s ease-in-out;
+			-ms-transition: all .13s ease-in-out;
+			 -o-transition: all .13s ease-in-out;
+					transition: all .13s ease-in-out;
+}
+
+.restaurant:hover {
+	background: #eee;
+}
+
+.restaurant .img-responsive {
+	display: block;
+	max-width: 360px;
+	height: 250px;
+	width: 100%;
+}
+
+.restaurant p {
+	text-align: justify;
+}
+
+.restaurant .adress {
+	display: inline-block;
+	text-align: left;
+	width: 100%;
+	float: right;
+}
+
+.restaurant .info {
+	display: inline-block;
+	float: right;
+	width: 100%;
 }
 
 .star {
@@ -153,9 +223,8 @@ header {
 .footer {
 	padding: 25px 0;
 	text-align: center;
-	background: #FDFDFD;
+	background: #eee;
 	box-shadow: 0px 0px 4px 1px #dbdbdb;
-	background: transparent;
 	position: relative;
 }
 
@@ -214,27 +283,12 @@ header {
 
 @media only screen and (max-width : 768px) {
 
-    .navbar-inverse .navbar-nav>li>a {
-        color: #fff;
-    }
-
-    .form-control {
-        margin-bottom: 10px;
-    }
-
-	.txt-block {
-		top: 25%;
+	.navbar-inverse .navbar-nav>li>a {
+		color: #fff;
 	}
 
-	.intro-text .intro-lead-in {
-		font-size: 23px;
-		margin-bottom: 0;
-		line-height: 20px;
-	}
-
-	.intro-text .intro-heading {
-		font-size: 43px;
-		margin-bottom: 14px;
+	.form-control {
+		margin-bottom: 10px;
 	}
 
 	#dowm {
@@ -249,19 +303,13 @@ header {
 	}
 
 	.intro-text .intro-lead-in {
-		font-size: 14px;
-		line-height: 38px;
+		font-size: 23px;
+		line-height: 20px;
 	}
 
 	.intro-text .intro-heading {
-		font-size: 20px;
-		line-height: 7px;
-		margin-bottom: 18px;
-	}
-
-	#dowm {
-		padding: 9px 20px;
-		font-size: 10px;
+		font-size: 43px;
+		margin-bottom: 14px;
 	}
 
 	.navbar-inverse {

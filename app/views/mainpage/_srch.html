@@ -1,41 +1,41 @@
-<% @srch.each do |rest| %>
-<div class="restaurant"><!-- RESTAURANT -->
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-      <a href="#">
-        <%= cl_image_tag(rest.photos.first.path, {size: '500x250', crop: :fit, class: "img-responsive"}) if rest.photos.first != nil %>
-      </a>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-      <h3 class="r-name"><%= rest.name %></h3>
-      <p><%= rest.review.truncate(300) %></p>
-      <%= link_to 'Подробнее', review_path(rest), :class => "btn btn-primary" %>
-      <% if admin_signed_in? %>
-      <%= link_to 'Редактировать', edit_review_path(rest), :class => "btn btn-success" %>
-      <%= link_to 'Удалить', review_path(rest), method: :delete, data: {}, :class => "btn btn-danger" %>
-      <% end %>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-      <div class="adress">
-        <h4><%= rest.address %></h4>
-      </div>
-      <div class="info">
-        <table>
-          <tr class="clearfix">
-            <td>Кухня:</td><td class="star"><span class="<%= rest.id %>mark1"></span></td>
-          </tr>
-          <tr class="clearfix">
-            <td>Интерьер:</td><td class="star"><span class="<%= rest.id %>mark2"></span></td>
-          </tr>
-          <tr class="clearfix">
-            <td>Обслуживание:</td><td class="star"><span class="<%= rest.id %>mark3"></span></td>
-          </tr>
-          <tr class="clearfix">
-            <td>Общая оценка:</td><td class="rating"><span class="<%= rest.id %>avgrate"></span><br /><%= rest.avgrate.round(1) %> из 5.0</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</div><!-- END RESTAURANT -->
-<% end %>
+				<% @srch.each do |rest| %>
+				<div class="restaurant"><!-- RESTAURANT -->
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+							<a href="#">
+								<%= cl_image_tag(rest.photos.first.path, {size: '500x250', crop: :fit, class: "img-responsive"}) if rest.photos.first != nil %>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+							<h3 class="r-name"><%= rest.name %></h3>
+							<p><%= rest.review.truncate(300) %></p>
+							<%= link_to 'Подробнее', review_path(rest), :class => "btn btn-primary" %>
+							<% if admin_signed_in? %>
+							<%= link_to 'Редактировать', edit_review_path(rest), :class => "btn btn-success" %>
+							<%= link_to 'Удалить', review_path(rest), method: :delete, data: {}, :class => "btn btn-danger" %>
+							<% end %>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-offset-1">
+							<div class="adress">
+								<h4><%= rest.address %></h4>
+							</div>
+							<div class="info">
+								<table>
+									<tr class="clearfix">
+										<td>Кухня:</td><td class="star"><span class="<%= rest.id %>mark1"></span></td>
+									</tr>
+									<tr class="clearfix">
+										<td>Интерьер:</td><td class="star"><span class="<%= rest.id %>mark2"></span></td>
+									</tr>
+									<tr class="clearfix">
+										<td>Обслуживание:</td><td class="star"><span class="<%= rest.id %>mark3"></span></td>
+									</tr>
+									<tr class="clearfix">
+										<td>Общая оценка:</td><td class="rating"><span class="<%= rest.id %>avgrate"></span><br /><%= rest.avgrate.round(1) %> из 5.0</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div><!-- END RESTAURANT -->
+				<% end %>
