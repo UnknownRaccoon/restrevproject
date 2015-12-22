@@ -15,14 +15,16 @@ $(document).ready(function() {
 
 
 //***************** SLIDE EFFECT ********************
-	/*if (w > 480) {
-		$('#content .c-main').hide();
+	if (w > 480) {
+		$('#content .c-main').css('margin-top', '2000px');
 		$(window).scroll(function(){
 			if ( $(this).scrollTop() >= 60) {
-				$('#content .c-main').slideDown();
+				$('#content .c-main').animate({
+					marginTop: 0
+				}, 2000);
 			}
 		});
-	}; */
+	}; 
 
 //***************** END SLIDE EFFECT ********************
 
