@@ -36,14 +36,17 @@
 							<li><%= link_to 'Написать новую рецензию', new_review_path if admin_signed_in? %></li>
              <li><%= link_to 'Выйти', destroy_admin_session_path, :method => :delete if admin_signed_in? %></li>
             </ul>
-					<%= form_tag root_path, :method => 'get', :id => "reviews_search", :class => "navbar-form navbar-left", :role => "search" do %>
+
+            <%= if params[:controller]=='mainpage' and ((params[:action]=='index') or (params[:action]=='search')) then form_tag({controller: "mainpage", action: "search"}, remote:true, enforce_utf8: true, method:'get', id: "reviews_search", class: "navbar-form navbar-left")  do
+  %>
 						<div class="form-group">
 							<%= text_field_tag :search, params[:search], :class => "form-control" %>
 							<%= submit_tag "Найти", :name => nil, :class => "btn btn-default" %>
 						</div>
-						<%= hidden_field_tag :sort, params[:sort] %>
-					<% end %>
-					</div>
+          </div>
+            <% end %>
+          <% end %>
+
 			</nav>
 		</div>
 	</div>
@@ -56,7 +59,7 @@
   		<div class="container">
   			<div class="row modal-body">
   				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-  					<img src="assets/mentor.jpg" class="img-responsive" alt="Виталий Лебедев">
+  					<img src=<%= asset_path('mentor.jpg')%> class="img-responsive" alt="Виталий Лебедев">
   				</div>
   				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
   					<!-- Project Details Go Here -->

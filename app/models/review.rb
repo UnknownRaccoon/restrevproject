@@ -5,6 +5,8 @@ class Review < ActiveRecord::Base
     validates :review, presence: true
     validates :keywords, presence: true
     validate :custom_validation
+    include PgSearch
+    pg_search_scope :search_in_text, :against => [:name,:address,:review,:keywords]
 
     def custom_validation
         errors.add(:" ", " Требуется укзать местоположение заведения") if not x.present?
@@ -14,12 +16,5 @@ class Review < ActiveRecord::Base
         mark1 * 0.4 + mark2 * 0.3 + mark3 * 0.3
     end
 
-    def self.search(search)
-     
-        if search
-            where('name LIKE ?', "%#{search}%")
-        else
-            all
-        end
-    end
+
 end

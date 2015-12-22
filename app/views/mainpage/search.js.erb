@@ -1,0 +1,8 @@
+var  r;
+// ev = JSON.parse(gon.watch('rs'));
+$('#rs').html('<%= escape_javascript render "srch" %>');
+$('.pagination').html('<%= escape_javascript(paginate(@srch, :remote => true).to_s) %>');
+<% @srch.each do |r| %>
+  var r={id:<%=r.id%>, mark1:<%=r.mark1%>,mark2:<%=r.mark2%>,mark3:<%=r.mark3%>};
+  rate(r);
+<% end %>
