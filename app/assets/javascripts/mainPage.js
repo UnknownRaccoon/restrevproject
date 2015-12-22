@@ -21,7 +21,7 @@ $(document).ready(function() {
 			if ( $(this).scrollTop() >= 60) {
 				$('#content .c-main').animate({
 					marginTop: 0
-				}, 2000);
+				}, 1800);
 			}
 		});
 	}; 
