@@ -70,8 +70,17 @@
 					<div class="rrd-date"><span>Дата публикации: </span>
 						<%= @review.created_at.strftime("%-d, %B %Y") %>
 					</div>
+          <hr>
 					<div class="rrd-txt"><%= @review.review %></div>
-				</div>
+          <hr>
+          <div class="rrd-txt"><span>Комментарий: </span>
+						<%= @review.comment %>
+					</div>
+          
+          <div class="rrd-txt"><span>Индексные слова: </span>
+						<%= @review.keywords %>
+					</div>
+        </div>
 			</div>
 		</div>
 	</div>
