@@ -19,12 +19,12 @@ $(document).ready(function() {
 		$('#content .c-main').css('margin-top', '2000px');
 		$(window).scroll(function(){
 			if ( $(this).scrollTop() >= 60) {
-				$('#content .c-main').stop().animate({
+				$('#content .c-main').animate({
 					marginTop: -20
 				}, 1800);
-				$('#content .c-main').stop().animate({
+				$('#content .c-main').animate({
 					marginTop: 0
-				}, 1800);
+				}, 1800).stop();
 			}
 		});
 	}; 
