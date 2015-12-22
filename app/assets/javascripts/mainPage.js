@@ -20,6 +20,9 @@ $(document).ready(function() {
 		$(window).scroll(function(){
 			if ( $(this).scrollTop() >= 60) {
 				$('#content .c-main').animate({
+					marginTop: -20
+				}, 1800);
+				$('#content .c-main').animate({
 					marginTop: 0
 				}, 1800);
 			}
