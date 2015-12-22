@@ -22,9 +22,6 @@ $(document).ready(function() {
 				$('#content .c-main').animate({
 					marginTop: -20
 				}, 1800);
-				$('#content .c-main').animate({
-					marginTop: 0
-				}, 1800).stop();
 			}
 		});
 	}; 
