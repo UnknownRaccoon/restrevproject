@@ -20,6 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+    views:
+          pagination:
+            first: "&laquo; Первая"
+            last: "Последняя &raquo;"
+            previous: "&lsaquo; Назад"
+            next: "Вперед &rsaquo;"
+            truncate: "&hellip;"
+
     activerecord:
         models:
             review: Статья
@@ -33,8 +41,10 @@ ru:
                 mark2: Интерьер
                 mark3: Обслуживание
                 keywords:  Ключевые слова
-    helpers:
-        submit:
-            review:
-                create: Сохранить статью
-                update: Сохранить статью
+
+        helpers:
+           submit:
+             review:
+                 create: Сохранить статью
+                 update: Сохранить статью
+      

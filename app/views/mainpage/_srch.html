@@ -2,7 +2,7 @@
 				<div class="restaurant"><!-- RESTAURANT -->
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-							<a href="#">
+							<a href="<%= review_path(rest)%>">
 								<%= cl_image_tag(rest.photos.first.path, {size: '500x250', crop: :fit, class: "img-responsive"}) if rest.photos.first != nil %>
 							</a>
 						</div>

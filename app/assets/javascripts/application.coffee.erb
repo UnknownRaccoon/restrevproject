@@ -19,7 +19,7 @@ window.initmap = () ->
             lat: latl
             lng: lngl
         zoom: 15
- options = 
+ options =
    enableHighAccuracy: true,
    timeout: 5000,
    maximumAge: 0
@@ -29,6 +29,7 @@ window.initmap = () ->
      showmap crd.latitude, crd.longitude
  er = (ps) ->
     console.log("pos unavialeble")
+    showmap 46.4711427, 30.7396057
  if navigator.geolocation
     navigator.geolocation.getCurrentPosition succ,er,options
  else

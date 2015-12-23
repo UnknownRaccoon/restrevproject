@@ -10,7 +10,7 @@ class Review < ActiveRecord::Base
 
     def custom_validation
         errors.add(:" ", " Требуется укзать местоположение заведения") if not x.present?
-#        errors.add(:" ", " Требуется выставить все оценки") if not mark1.present? or not mark2.present? or not mark3.present?
+        errors.add(:" ", " Требуется выставить все оценки") if not mark1.present? or not mark2.present? or not mark3.present?
     end
     def avgrate
         mark1 * 0.4 + mark2 * 0.3 + mark3 * 0.3
