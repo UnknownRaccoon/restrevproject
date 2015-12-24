@@ -35,7 +35,7 @@
 							<li><%= link_to 'О нас', "#portfolioModal1", :class => "portfolio-link", "data-toggle" => "modal" %></li>
 							<li><%= link_to 'Контакты',"#portfolioModal2", :class => "portfolio-link", "data-toggle" => "modal" %></li>
 							<li><%= link_to 'Новая рецензия', new_review_path if admin_signed_in? %></li>
-             <li><%= link_to 'Выйти', destroy_admin_session_path, :method => :delete if admin_signed_in? %></li>
+              <li><%= link_to 'Выйти', destroy_admin_session_path, :method => :delete if admin_signed_in? %></li>
             </ul>
 
             <%= if params[:controller]=='mainpage' and ((params[:action]=='index') or (params[:action]=='search')) then form_tag({controller: "mainpage", action: "search"}, remote:true, enforce_utf8: true, method:'get', id: "reviews_search", class: "navbar-form navbar-left")  do

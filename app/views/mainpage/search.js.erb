@@ -1,4 +1,4 @@
-var  r;
+var  r,tp;
 // ev = JSON.parse(gon.watch('rs'));
 $('#rs').html('<%= escape_javascript render "srch" %>');
 $('.pagination').html('<%= escape_javascript(paginate(@srch, :remote => true).to_s) %>');
@@ -6,3 +6,6 @@ $('.pagination').html('<%= escape_javascript(paginate(@srch, :remote => true).to
   var r={id:<%=r.id%>, mark1:<%=r.mark1%>,mark2:<%=r.mark2%>,mark3:<%=r.mark3%>};
   rate(r);
 <% end %>
+$('#responsive-menu').collapse("hide");
+tp=$('#rs').offset().top-150;
+$('body,html').animate({scrollTop:tp},1000)
