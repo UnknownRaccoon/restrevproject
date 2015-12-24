@@ -57,7 +57,7 @@
 							<p class="cat-title">Поделиться:</p>
 							<div class="cat-info">
 								<script type="text/javascript">
-								document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"http://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));
+								document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"https://vk.com/images/share_32_eng.png\" width=\"32\" height=\"32\" />", eng: 1}));
 								</script>
 								<a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %> target="_blank>
 									<img src="http://blog.bnv.com.ua/wp-content/themes/cell/images/fb.png">
@@ -76,8 +76,8 @@
           <div class="rrd-txt"><span>Комментарий: </span>
 						<%= @review.comment %>
 					</div>
-          
-          <div class="rrd-txt"><span>Индексные слова: </span>
+
+          <div class="rrd-txt" hidden><span>Индексные слова: </span>
 						<%= @review.keywords %>
 					</div>
         </div>
