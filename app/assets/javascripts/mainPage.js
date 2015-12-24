@@ -52,6 +52,11 @@ $(document).ready(function() {
 		$('#mp-bg').height(h);
 		$('.intro-text .intro-lead-in').css('background', 'rgba(0,0,0,0.5)');
 		$('.intro-text .intro-heading').css('background', 'rgba(0,0,0,0.4)');
+	} else {
+		$('#mp-bg').hide();
+		$('#bgvideo').show();
+		$('.intro-text .intro-lead-in').css('background', 'rgba(0,0,0,0.0)');
+		$('.intro-text .intro-heading').css('background', 'rgba(0,0,0,0.0)');
 	}
 //***************** END SET HEADER BG ********************
 
@@ -61,7 +66,7 @@ $(document).ready(function() {
 
 
 
-//*************** SET HEADER BG ON SCROLL******************
+//*************** SET HEADER BG ON RESIZE******************
 $(window).resize(function() {
 	var h = $(window).height();
 	var w = $(window).width();
@@ -72,8 +77,10 @@ $(window).resize(function() {
 		$('.intro-text .intro-lead-in').css('background', 'rgba(0,0,0,0.5)');
 		$('.intro-text .intro-heading').css('background', 'rgba(0,0,0,0.4)');
 	} else {
-		$('#bgvideo').show();
 		$('#mp-bg').hide();
+		$('#bgvideo').show();
+		$('.intro-text .intro-lead-in').css('background', 'rgba(0,0,0,0.0)');
+		$('.intro-text .intro-heading').css('background', 'rgba(0,0,0,0.0)');
 	}
 })
 
